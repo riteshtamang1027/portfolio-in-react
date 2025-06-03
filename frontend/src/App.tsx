@@ -1,9 +1,10 @@
-import NavbarSection from "./components/navbarSection";
+// import NavbarSection from "./components/navbarSection";
 
 function App() {
   return (
     <div>
-      <NavbarSection />
+      Hello World!
+      {/* <NavbarSection /> */}
     </div>
   );
 }

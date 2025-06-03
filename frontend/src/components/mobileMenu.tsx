@@ -1,12 +1,13 @@
 import {
   Sheet,
   SheetContent,
-  SheetDescription,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
+import { useState } from "react";
+import { NavLink } from "react-router";
 
 interface Itext {
   text: string;
@@ -17,8 +18,9 @@ interface Imenu {
 }
 
 export default function MobileMenu({ Items }: Imenu) {
+  const [IsOpen, setIsOpen] = useState(false);
   return (
-    <Sheet>
+    <Sheet open={IsOpen} onOpenChange={setIsOpen}>
       <SheetTrigger>
         <Menu className="text-white" />
       </SheetTrigger>
@@ -28,9 +30,13 @@ export default function MobileMenu({ Items }: Imenu) {
           <div className="space-y-4 text-center mt-12">
             {Items.map((item: Itext, index: number) => (
               <div key={index} className="space-y-2">
-                <SheetDescription className="cursor-pointer font-medium text-white opacity-80">
+                <NavLink
+                  onClick={() => setIsOpen(false)}
+                  to={item.url}
+                  className="cursor-pointer font-medium text-sm text-white opacity-80"
+                >
                   {item.text.toUpperCase()}
-                </SheetDescription>
+                </NavLink>
                 <hr />
               </div>
             ))}
