@@ -1,56 +1,33 @@
-import { Pencil } from "lucide-react";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
-
-export default function HeroSection() {
+export default function heroSection() {
   return (
-    <div className="relative lg:w-100 lg:h-136 md:w-84 md:h-124 sm:h-72 h-64 mt-8 rounded-md p-0.5 bg-gradient-to-b from-pink-700 via-violet-700 to-red-700 group cursor-pointer">
-      {/* Profile Background Image */}
-      <img
-        src="https://plus.unsplash.com/premium_photo-1673967859849-c8a37fa85aeb?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxfHx8ZW58MHx8fHx8"
-        alt=""
-        className="w-full h-full object-cover rounded-md"
-      ></img>
-      {/* this is a div to hover your profile section it show. */}
-      <div className="absolute top-0 group-hover:bg-black/20 w-full h-full rounded-md duration-500"></div>
+    // Background theem
+    <div className="relative bg-yellow-600 w-88 h-120 mt-12">
+      {/* Profile section */}
 
-      {/* Edit your Profile Background Picture */}
+      <div className="absolute flex gap-8 w-240 left-1/2 top-1/2 transform -translate-y-1/2 border border-black">
+        {/* Profile picture */}
+        <div className="flex flex-col bg-blue-300  items-center w-66 gap-2 p-4">
+          <div className="">
+            <img
+              className="w-44 h-44 rounded-full object-cover"
+              src="https://media.istockphoto.com/id/1392583255/photo/portrait-of-a-man-riding-his-classic-motorbike-in-city.webp?a=1&b=1&s=612x612&w=0&k=20&c=9Kjpc34MR9ikiTGLP0-HsvSy39d97iPhAFPjWBiqvoY="
+              alt="profile image"
+            />
+          </div>
 
-      <Tooltip>
-        <TooltipTrigger className=" absolute bottom-2 left-2 rounded-full bg-white p-2">
-          <Pencil size={16} strokeWidth={1.5} />
-        </TooltipTrigger>
-        <TooltipContent className="">
-          <p>Edit your picture</p>
-        </TooltipContent>
-      </Tooltip>
-
-      {/* Profile Image section */}
-      <div className="flex md:flex-row flex-col items-center gap-4 p-4 absolute md:top-1/2 md:-right-1/2 transform  -translate-y-1/2 max-md:left-1/2 max-md:-translate-x-1/2">
-        <div className="lg:w-36 sm:w-32 lg:h-36 sm:h-32 w-28 h-28 rounded-full   ">
-          {/* Profile Image. */}
-          <img
-            className="object-cover w-full h-full rounded-full "
-            src="https://images.unsplash.com/photo-1748682170760-aba4b59da534?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxNnx8fGVufDB8fHx8fA%3D%3D"
-            alt=""
-          />
-          {/* you can edit your profile picture */}
-          <Tooltip>
-            <TooltipTrigger className=" absolute border top-8 left-1/2 transform -translate-x-1/2 rounded-full bg-white p-2">
-              <Pencil size={12} strokeWidth={1.5} />
-            </TooltipTrigger>
-            <TooltipContent className="">
-              <p>Edit your picture</p>
-            </TooltipContent>
-          </Tooltip>
+          {/* Your name and your  */}
+          <div className="">
+            <p className="text-xl font-bold">Your name</p>
+            <p className="text-lg font-medium">Your post</p>
+          </div>
         </div>
+
+
+        {/* About yourself */}
+
         <div>
-          <p className="text-lg font-medium opacity-80">Ritesh Tamang</p>
-          <p className="opacity-70 font-medium">Web Developer</p>
-          
+         <p className="text-6xl font-bold">Hello Everyone ...!</p>
+         <p className="text-lg font-medium">I am Ritesh. So, who am I and what can I do, You can explore here.</p>
         </div>
       </div>
     </div>
