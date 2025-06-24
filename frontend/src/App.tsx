@@ -2,7 +2,7 @@
 
   function App() {
     return (
-      <div className="w-full h-screen bg-gradient-to-r text-white from-black to-cyan-600">
+      <div className="w-full bg-gradient-to-r text-white from-black min-h-screen to-cyan-600">
         <HeroSection />
       </div>
     );

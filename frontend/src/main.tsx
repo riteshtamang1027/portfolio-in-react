@@ -12,7 +12,9 @@ import NavbarSection from "./components/navbarSection.tsx";
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <BrowserRouter>
-    <NavbarSection />
+   <div className="sticky top-0 z-10">
+     <NavbarSection />
+   </div>
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/about" element={<AboutSection />} />

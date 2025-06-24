@@ -5,14 +5,14 @@ export default function heroSection() {
    <div>
 
     {/*  Background theem */}
-    <div className="relative bg-gradient-to-r  from-slate-800 to-cyan-500 w-88 h-120">
-      </div>
+    {/* <div className="relative bg-gradient-to-r from-slate-800 to-cyan-500 w-88 h-120">
+      </div> */}
       {/* Profile section */}
 
-      <div className="absolute lg:px-28 md:px-16 px-4 top-64 flex md:flex-row flex-col items-center justify-between gap-8 w-full ">
+      <div className="lg:px-28 md:px-16 px-4  flex md:flex-row flex-col items-center gap-12 w-full ">
         {/* Profile picture */}
         
-        <div className="flex flex-col bg-cyan-700 md:w-1/3 w-full  items-center gap-2 p-4">
+        <div className="flex flex-col bg-cyan-700 md:w-1/3 w-full md:h-88 rounded-sm items-center justify-center gap-2 p-4">
          
           <div className="">
             <img
@@ -23,8 +23,8 @@ export default function heroSection() {
           </div>
 
           {/* Your name and your  */}
-          <div className="">
-            <p className="text-xl font-bold">Your name</p>
+          <div className="text-center">
+            <p className="text-xl font-bold">Ritesh Tamang</p>
             <p className="text-lg font-medium">Your post</p>
           </div>
         </div>
@@ -32,8 +32,8 @@ export default function heroSection() {
         {/* About yourself */}
 
         <div className="space-y-4 md:w-2/3 w-full">
-          <p className="text-6xl font-bold">Hello Everyone ...!</p>
-          <p className="text-lg font-medium">
+          <p className="lg:text-5xl md:text-4xl text-xl font-bold">Hello Everyone ...!</p>
+          <p className="md:text-lg text-base font-medium">
             I am Ritesh. So, who am I and what I can do, You can explore here.
           </p>
           <div className="flex items-center gap-4">
@@ -50,7 +50,7 @@ export default function heroSection() {
 
           {/* about yourself */}
           <div>
-            <p className="text-lg font-medium">
+            <p className="md:text-lg text-base font-medium">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam,
               saepe libero aliquid molestiae iste fugit exercitationem quis, id
               molestias asperiores neque veniam error architecto quisquam!
