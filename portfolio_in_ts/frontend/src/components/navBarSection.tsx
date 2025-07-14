@@ -1,9 +1,10 @@
 import { Link } from "react-router";
 import { Avatar, AvatarFallback, AvatarImage } from "../components/ui/avatar";
+import { ModeToggle } from "./modeToggle";
 export default function NavBarSection() {
   return (
-    <div className=" xl:px-64 lg:px-32 md:px-16 sm:px-8 px-4 bg-gray-200">
-      <div className=" p-2 rounded-m flex items-center justify-between">
+    <div className=" xl:px-64 lg:px-32 md:px-16 sm:px-8 px-4 border">
+      <div className=" p-2 rounded-m flex items-center justify-between ">
         {/* Right side section. */}
         <div className="flex items-center gap-2">
           <Avatar>
@@ -22,7 +23,7 @@ export default function NavBarSection() {
             <Link to={item.url} key={index} className=" cursor-pointer">{item.text.toUpperCase()}</Link>
           ))}
 
-          <div>mode</div>
+          <ModeToggle/>
         </div>
       </div>
     </div>

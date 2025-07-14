@@ -7,8 +7,11 @@ import ContactPage from './pages/contactPage.tsx';
 import ProjectPage from './pages/projectPage.tsx';
 import ResumePage from './pages/resumePage.tsx';
 import NavBarSection from './components/navBarSection.tsx';
+import { ThemeProvider } from './components/themeProvider.tsx';
 
 createRoot(document.getElementById('root')!).render(
+      <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
+  
   <StrictMode>
      <BrowserRouter>
         <NavBarSection/>
@@ -20,5 +23,6 @@ createRoot(document.getElementById('root')!).render(
 
     </Routes>
   </BrowserRouter>
-  </StrictMode>,
+  </StrictMode>
+  </ThemeProvider>,
 )
