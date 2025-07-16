@@ -1,8 +1,9 @@
+import HeroProfileSection from "./components/heroProfileSection";
 
 export default function App() {
   return (
-    <div className="xl:px-64 lg:px-32 md:px-16 sm:px-8 px-4">
-      Hello World
+    <div className="">
+     <HeroProfileSection/>
     </div>
   )
 }
