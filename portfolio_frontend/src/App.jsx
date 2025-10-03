@@ -3,8 +3,7 @@ import Navbar from './components/navbar'
 
 export default function App() {
   return (
-    <div className='w-full'>
-      <Navbar/>
+  <div className="h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-teal-900">      <Navbar/>
     </div>
   )
 }
