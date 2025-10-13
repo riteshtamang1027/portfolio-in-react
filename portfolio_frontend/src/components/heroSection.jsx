@@ -24,19 +24,20 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <div className="lg:px-32 md:px-8 sm:px-16 px-8  text-white flex items-center justify-between gap-16">
+    <div className="lg:px-32 md:px-8 sm:px-16 px-8  text-white flex md:flex-row flex-col md:items-center md:justify-between justify-center md:gap-16">
       {/* profile container */}
 
       <div className="flex justify-center md:justify-start">
-        <div className="relative w-[400px] h-[500px]">
+        <div className="relative w-[400px] md:h-[500px] h-[400px]">
           {/* Outer cyan glow - largest */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-cyan-400/20 rounded-full blur-[60px]"></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 md:w-[500px] md:h-[500px] bg-cyan-400/20 rounded-full md:blur-[60px] blur-[40px] w-[400px] h-[400px] "></div>
 
           {/* Middle cyan glow */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-cyan-400/30 rounded-full blur-[40px]"></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 md:w-[400px] md:h-[400px] w-[300px] h-[300px]  bg-cyan-400/30 rounded-full md:blur-[40px] blur-[30px]"></div>
 
           {/* Inner bright cyan glow - moon effect */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[320px] h-[320px] bg-cyan-400/40 rounded-full blur-[20px]"></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 md:w-[320px] md:h-[320px]
+          w-[240px] h-[240px] bg-cyan-400/40 rounded-full md:blur-[20px] blur-[10px]"></div>
 
           {/* Teardrop container */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80">
@@ -53,7 +54,7 @@ export default function HeroSection() {
       </div>
 
       {/* text container */}
-      <div className="space-y-8">
+      <div className="space-y-8 max-md:py-8">
         {/* text area */}
         <div className="space-y-1.5">
           <p className="text-xl font-semibold">Hi,🫡 I'm </p>
