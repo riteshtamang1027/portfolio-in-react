@@ -1,11 +1,18 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Download } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function Navbar() {
   const [indexActive, setindexActive] = useState(0);
   return (
-    <div className="border-b border-gray-700">
-      <div className=" flex items-center justify-between lg:px-32 md:px-8 sm:px-16 px-8 py-2">
+    <div     
+    className="border-b border-gray-700">
+      <motion.div
+    // make it animated move to left to right when webpage open
+      initial={{opacity:0, x:-200, filter:"blur(10px)"}}
+      animate={{opacity:1, x:0, filter:"blur(0px)"}}
+      transition={{duration:1.2, ease:"easeOut"}}
+      className=" flex items-center justify-between lg:px-32 md:px-8 sm:px-16 px-8 py-2">
         {/* left side div */}
         <div className="font-bold lg:text-2xl md:text-xl text-gray-800">
           <span className="text-gray-100 border-b-2 border-sky-700">Port</span>
@@ -17,7 +24,11 @@ export default function Navbar() {
 
         <div className="md:flex items-center lg:gap-8 gap-6 hidden  font-semibold lg:text-lg">
           {navItems.map((item, index) => (
-            <p
+            <motion.p
+            initial={{ opacity:0}}
+            animate={{opacity:1}}
+         transition={{ delay: 0.3 + index * 0.1, duration: 0.6 , ease:"easeInOut"}}
+
               key={index}
               onClick={()=>setindexActive(index)}
                 className={`relative cursor-pointer transition-all duration-300
@@ -30,7 +41,7 @@ export default function Navbar() {
               `}
             >
               {item}
-            </p>
+            </motion.p>
           ))}
         </div>
 
@@ -41,7 +52,7 @@ export default function Navbar() {
             <Download size={16} strokeWidth={2} className="hidden sm:flex" />
           </button>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

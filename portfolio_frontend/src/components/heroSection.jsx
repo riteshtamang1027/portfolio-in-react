@@ -1,6 +1,6 @@
 import { Facebook, Github, Instagram, Linkedin } from "lucide-react";
 import { useEffect, useRef } from "react";
-
+import "../App.css"
 import Typed from "typed.js";
 
 export default function HeroSection() {
@@ -42,11 +42,11 @@ export default function HeroSection() {
           {/* Teardrop container */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80">
             {/* Teardrop shape with image */}
-            <div className="relative w-full h-full teardrop-shape overflow-hidden">
+            <div className="relative w-full radius h-full teardrop-shape overflow-x-hidden">
               <img
                 src="https://images.unsplash.com/photo-1758797849614-aea4f74fb056?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw0fHx8ZW58MHx8fHx8"
                 alt="Chandni Chauhan"
-                className="w-80 h-80 rounded-full object-cover "
+                className="w-full h-full object-cover  "
               />
             </div>
           </div>
@@ -85,11 +85,11 @@ export default function HeroSection() {
         {/* direct link bottom section */}
         <div className="flex items-center gap-8">
           {/* hire button */}
-          <button className="border px-4 py-1.5 rounded-md cursor-pointer bg-cyan-700">
+          <button className="border px-4 py-1.5 rounded-md cursor-pointer bg-gradient-to-r to-cyan-800 from-slate-800">
             Hire Me
           </button>
           {/* contact button */}
-          <button className="border px-4 py-1.5 rounded-md cursor-pointer">
+          <button className="border px-4 py-1.5 rounded-md bg-gray-300 text-black border-cyan-400 cursor-pointer">
             Contact Me
           </button>
         </div>
