@@ -5,7 +5,7 @@ export default function heroSection() {
   return (
     <div className="xl:px-64 lg:px-32 md:px-16 px-8 text-white h-full">
       {/* main div */}
-      <div className="relative w-full border border-cyan-600 px-4 py-4 top-1/2 transform -translate-y-1/2 bg-gray-500/40 rounded-2xl shadow-2xl space-y-8">
+      <div className="relative w-full border border-cyan-600 px-4 py-4 top-1/2 transform -translate-y-1/2 bg-[linear-gradient(to_left,var(--custom-a0),var(--custom-a10),var(--custom-a20),var(--custom-a30),var(--custom-a40))] rounded-2xl shadow-2xl space-y-8">
         {/* Header section */}
         <p className="text-white text-3xl font-bold">
           Port <span className="text-cyan-500">Folio</span>

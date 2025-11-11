@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+:root {
+--custom-a0: #1a123d;
+--custom-a10: #1e2341;
+--custom-a20: #172A47;
+--custom-a30: #1c3452;
+--custom-a40: #203248;
+}
+
 
 .typed-cursor {
   color: #06b6d4; 
