@@ -1,97 +1,63 @@
+import React from "react";
 import { Facebook, Github, Instagram, Linkedin } from "lucide-react";
-import { useEffect, useRef } from "react";
-import "../App.css"
-import Typed from "typed.js";
-
-export default function HeroSection() {
-  // Create reference to store the DOM element containing the animation
-  const el = useRef(null);
-
-  useEffect(() => {
-    const typed = new Typed(el.current, {
-      strings: ["Frontend Developer"],
-      typeSpeed: 70,
-      backSpeed: 70,
-      loop: true,
-      showCursor: true,
-      cursorChar: "|",
-    });
-
-    return () => {
-      // Destroy Typed instance during cleanup to stop animation
-      typed.destroy();
-    };
-  }, []);
-
+export default function heroSection() {
   return (
-    <div className="lg:px-32 md:px-8 sm:px-16 px-8  text-white flex md:flex-row flex-col md:items-center md:justify-between justify-center md:gap-16">
-      {/* profile container */}
+    <div className="xl:px-64 lg:px-32 md:px-16 px-8 text-white h-full">
+      {/* main div */}
+      <div className="relative w-full border border-cyan-600 px-4 py-4 top-1/2 transform -translate-y-1/2 bg-gray-500/40 rounded-2xl shadow-2xl space-y-8">
+        {/* Header section */}
+        <p className="text-white text-3xl font-bold">
+          Port <span className="text-cyan-500">Folio</span>
+        </p>
 
-      <div className="flex justify-center md:justify-start">
-        <div className="relative w-[400px] md:h-[500px] h-[400px]">
-          {/* Outer cyan glow - largest */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 md:w-[500px] md:h-[500px] bg-cyan-400/20 rounded-full md:blur-[60px] blur-[40px] w-[400px] h-[400px] "></div>
+        {/* components sections */}
+        <div className="flex items-center justify-between w-full gap-16 px-4">
+          {/* left div where introduction section */}
+          <div className="w-2/3 space-y-8">
+            {/* text section */}
+            <div className="text-base space-y-4">
+              <div className="space-y-2">
+                <p className="text-xl font-bold opacity-90">Hi, I'm</p>
+                <p className="text-3xl font-bold text-cyan-500">{`Ritesh Tamang`}</p>
+              </div>
+              <p className="text-2xl font-semibold">
+                I'm <span>Frontend Developer.</span>{" "}
+              </p>
+              <p className="font-semibold opacity-80 trackind-wide">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
+                sit distinctio, harum necessitatibus incidunt amet eius dolores
+                alias enim quam qui repellat facere sunt .
+              </p>
+            </div>
 
-          {/* Middle cyan glow */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 md:w-[400px] md:h-[400px] w-[300px] h-[300px]  bg-cyan-400/30 rounded-full md:blur-[40px] blur-[30px]"></div>
+            {/* button section */}
+            <div className="flex items-center gap-12">
+              <button className="border px-4 py-2 rounded-full text-sm font-semibold bg-cyan-500 text-black/60 cursor-pointer border-white">
+                Download CV
+              </button>
 
-          {/* Inner bright cyan glow - moon effect */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 md:w-[320px] md:h-[320px]
-          w-[240px] h-[240px] bg-cyan-400/40 rounded-full md:blur-[20px] blur-[10px]"></div>
-
-          {/* Teardrop container */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80">
-            {/* Teardrop shape with image */}
-            <div className="relative w-full radius h-full teardrop-shape overflow-x-hidden">
-              <img
-                src="https://images.unsplash.com/photo-1758797849614-aea4f74fb056?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw0fHx8ZW58MHx8fHx8"
-                alt="Chandni Chauhan"
-                className="w-full h-full object-cover  "
-              />
+              {/* social media sections */}
+              <div className="flex items-center gap-4">
+                {mediaIcon.map((Icon, index) => (
+                  <div
+                    key={index}
+                    className="border p-2 rounded-full border-cyan-500 cursor-pointer"
+                  >
+                    <Icon width={20} height={20} className="text-cyan-500" />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
-      </div>
 
-      {/* text container */}
-      <div className="space-y-8 max-md:py-8">
-        {/* text area */}
-        <div className="space-y-1.5">
-          <p className="text-xl font-semibold">Hi,🫡 I'm </p>
-          <p className="text-3xl font-bold">Ritesh Tamang </p>
-          <p className="text-xl font-bold">
-            And I'm a{" "}
-            <span ref={el} className="text-cyan-500 font-bold text-2xl"></span>{" "}
-          </p>
-          <p className="text-lg">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
-            labore sit doloremque, corporis ex fuga, animi quasi quo dolorem
-            perferendis corrupti id hic distinctio. Est!
-          </p>
-        </div>
-
-        {/* social media link */}
-        <div className="flex items-center gap-4">
-          {mediaIcon.map((Icon, index) => (
-            <div
-              key={index}
-              className="border p-1 rounded-md bg-sky-800 cursor-pointer"
-            >
-              <Icon size={24} strokeWidth={1} />
-            </div>
-          ))}
-        </div>
-
-        {/* direct link bottom section */}
-        <div className="flex items-center gap-8">
-          {/* hire button */}
-          <button className="border px-4 py-1.5 rounded-md cursor-pointer bg-gradient-to-r to-cyan-800 from-slate-800">
-            Hire Me
-          </button>
-          {/* contact button */}
-          <button className="border px-4 py-1.5 rounded-md bg-gray-300 text-black border-cyan-400 cursor-pointer">
-            Contact Me
-          </button>
+          {/* Image container section */}
+          <div className="w-1/3">
+            <img
+              className="rounded-full "
+              src="https://images.unsplash.com/photo-1654110455429-cf322b40a906?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZmlsZSUyMHBpY3R1cmV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=600"
+              alt="Image"
+            />
+          </div>
         </div>
       </div>
     </div>

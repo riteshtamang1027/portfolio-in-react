@@ -1,60 +1,9 @@
-import { useState } from "react";
-import { Download } from "lucide-react";
-import { motion } from "framer-motion";
+import React from 'react'
 
 export default function Navbar() {
-  const [indexActive, setindexActive] = useState(0);
   return (
-    <div     
-    className="border-b border-gray-700">
-      <motion.div
-    // make it animated move to left to right when webpage open
-      initial={{opacity:0, x:-200, filter:"blur(10px)"}}
-      animate={{opacity:1, x:0, filter:"blur(0px)"}}
-      transition={{duration:1.2, ease:"easeOut"}}
-      className=" flex items-center justify-between lg:px-32 md:px-8 sm:px-16 px-8 py-2">
-        {/* left side div */}
-        <div className="font-bold lg:text-2xl md:text-xl text-gray-800">
-          <span className="text-gray-100 border-b-2 border-sky-700">Port</span>
-          <span className="text-cyan-600 border-b-2 border-gray-200">
-            Folio
-          </span>
-        </div>
-        {/* center div */}
-
-        <div className="md:flex items-center lg:gap-8 gap-6 hidden  font-semibold lg:text-lg">
-          {navItems.map((item, index) => (
-            <motion.p
-            initial={{ opacity:0}}
-            animate={{opacity:1}}
-         transition={{ delay: 0.3 + index * 0.1, duration: 0.6 , ease:"easeInOut"}}
-
-              key={index}
-              onClick={()=>setindexActive(index)}
-                className={`relative cursor-pointer transition-all duration-300
-                ${
-                  indexActive === index
-                    ? "text-cyan-500 after:w-full"
-                    : "text-gray-100 hover:text-cyan-500 after:w-0 hover:after:w-full"
-                }
-                after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-sky-700 after:transition-all after:duration-300
-              `}
-            >
-              {item}
-            </motion.p>
-          ))}
-        </div>
-
-        {/* left side dive */}
-        <div className="p-[1px] rounded-lg bg-gradient-to-r to-gray-600 from-sky-600 ">
-          <button className="flex items-center gap-1 lg:px-3 px-2 lg:py-1 md:py-0.5 rounded-md lg:text-base text-sm font-semibold cursor-pointer bg-gray-200 text-gray-900">
-            Download CV{" "}
-            <Download size={16} strokeWidth={2} className="hidden sm:flex" />
-          </button>
-        </div>
-      </motion.div>
+    <div className='xl:px-64 lg:px-32 md:px-16 px-8'>
+     {/* <p className='text-white text-4xl font-bold'>Port <span className='text-cyan-500'>Folio</span></p> */}
     </div>
-  );
+  )
 }
-
-const navItems = ["Home", "About", "Skill", "Services", "Portfolio", "Contact"];
