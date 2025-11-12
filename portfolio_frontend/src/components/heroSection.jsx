@@ -5,13 +5,13 @@ import { Typewriter } from "react-simple-typewriter";
 import { motion } from "framer-motion";
 export default function heroSection() {
   return (
-    <div className="xl:px-64 lg:px-32 md:px-16 px-4 sm:px-32 max-md:mt-4 text-white h-screen">
+    <div className="text-white">
       {/* main div */}
       <motion.div
         initial={{ opacity: 0, x: -100 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 1 }}
-        className="md:relative border border-cyan-600 px-4 py-4 md:top-1/2 md:transform md:-translate-y-1/2 bg-[linear-gradient(to_left,var(--custom-a0),var(--custom-a10),var(--custom-a20),var(--custom-a30),var(--custom-a40))] rounded-2xl shadow-2xl space-y-8"
+        className=" border border-cyan-600 px-4 py-2 bg-[linear-gradient(to_left,var(--custom-a0),var(--custom-a10),var(--custom-a20),var(--custom-a30),var(--custom-a40))] rounded-2xl shadow-2xl space-y-8"
       >
         {/* Header section */}
         <motion.p

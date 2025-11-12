@@ -24,7 +24,7 @@ export default function AboutSection() {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   return (
-    <div className=" bg-[linear-gradient(to_right,var(--custom-a0),var(--custom-a10),var(--custom-a20),var(--custom-a30),var(--custom-a40))] h-full xl:px-32 md:px-24 px-4 sm:px-16 py-24 border">
+    <div className=" bg-[linear-gradient(to_right,var(--custom-a0),var(--custom-a10),var(--custom-a20),var(--custom-a30),var(--custom-a40))] h-full xl:px-32 md:px-24 px-4 sm:px-16 py-16">
      
      <div className="text-white  flex flex-col lg:flex-row items-center gap-12  justify-between ">
        {/* Profile Image */}

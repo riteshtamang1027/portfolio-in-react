@@ -20,8 +20,10 @@ export default function Navbar() {
     transition={{duration:1,delay:0.5}}
     
     
-    className="xl:px-64 lg:px-32 md:px-16 sm:px-32 px-4">
-      <div className="md:relative md:top-8 md:left-1/2 md:transform md:-translate-x-1/2 md:w-max px-4 py-2 bg-gray-600/70 shadow-2xl rounded-2xl">
+    className="relative top-4 xl:px-64 lg:px-32 md:px-16 px-8 sm:px-32 flex items-center justify-center">
+      <div className="md:w-max w-full px-4 py-2 bg-gray-600/70 shadow-2xl rounded-2xl border border-cyan-600">
+
+
         <div className="flex items-center justify-between sm:gap-8 md:gap-16 w-full">
           {icons.map((item, index) => (
             <Tooltip
@@ -61,6 +63,7 @@ export default function Navbar() {
             </Tooltip>
           ))}
         </div>
+
       </div>
     </motion.div>
   );
