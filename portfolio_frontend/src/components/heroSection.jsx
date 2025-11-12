@@ -1,3 +1,4 @@
+"use client";
 import Tooltip from "@mui/material/Tooltip";
 import { Facebook, Github, Instagram, Linkedin } from "lucide-react";
 import { Typewriter } from "react-simple-typewriter";
@@ -97,9 +98,15 @@ export default function heroSection() {
                         },
                       }}
                     >
-                      <div className="border p-2 rounded-full border-cyan-500 cursor-pointer transition-transform hover:scale-110  hover:ring-cyan-300 hover:ring-2 hover:ring-offset-1 hover:ring-offset-transparent duration-300">
+                      <motion.div
+                        whileHover={{
+                          borderColor: "#22d3ee",
+                          boxShadow: "0px 0px 15px rgba(34, 211, 238, 0.35)",
+                        }}
+                        className="border p-2 rounded-full border-cyan-500 cursor-pointer transition-transform hover:scale-110 duration-300"
+                      >
                         <Icon.icon className="text-cyan-500 w-5 h-5 md:w-6 md:h-6 " />
-                      </div>
+                      </motion.div>
                     </Tooltip>
                   </div>
                 ))}

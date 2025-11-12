@@ -9,7 +9,7 @@ import Navbar from './components/navbar.jsx';
 createRoot(document.getElementById('root')).render(
   <StrictMode>
      <BrowserRouter>
-     <div className='sticky top-0'>
+     <div className='sticky top-0 z-10'>
          <Navbar/>
        </div>
      <Routes>
