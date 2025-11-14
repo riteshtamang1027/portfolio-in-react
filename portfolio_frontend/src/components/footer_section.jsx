@@ -1,49 +1,104 @@
 "use client";
-import { Facebook, Github, Instagram, Linkedin } from "lucide-react";
+import { ArrowUpRight, Facebook, Github, Instagram, Linkedin } from "lucide-react";
 import { motion } from "framer-motion";
+import {
+  BriefcaseBusiness,
+  FileUser,
+  House,
+  Mail,
+  UserRound,
+} from "lucide-react";
 
-export default function Footer() {
+export default function Footer_section() {
   return (
-    <footer className="bg-gradient-to-r from-cyan-900 via-cyan-800 to-cyan-900 text-white py-12 px-6">
+    <div className="bg-gradient-to-r from-cyan-900/70 via-cyan-800/70 to-cyan-900/70 text-white py-12 xl:px-64 lg:px-32 md:px-16 px-4 sm:px-32">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
-
         {/* Brand & Tagline */}
         <div className="space-y-4">
           <h2 className="text-2xl font-bold text-cyan-400">Ritesh Tamang</h2>
           <p className="text-gray-300 text-sm">
-            Crafting modern web experiences with React, Next.js, and Tailwind CSS.
+            Crafting modern web experiences with React, Next.js, and Tailwind
+            CSS.
           </p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            <p className="text-gray-400 text-xs">Building clean, responsive, and interactive web apps.</p>
+            <p className="text-gray-400 text-xs">
+              Building clean, responsive, and interactive web apps.
+            </p>
           </motion.div>
         </div>
 
         {/* Quick Links */}
-        <div className="space-y-2">
-          <h3 className="font-semibold text-cyan-300 uppercase tracking-wider text-sm">Quick Links</h3>
+        <div className="space-y-4">
+          <p className="font-semibold text-cyan-300 uppercase tracking-wider text-sm">Quick Links</p>
+          <div className="flex flex-col gap-3">
+          {quick_links.map((item, index) => (
+          <div key={index} className="cursor-pointer group border ">
+            {/* Icons */}
+            <div className="flex items-center gap-2 group-hover:scale-105 transition-all duration-500">
+              <item.icon className="w-4 h-4 group-hover:text-cyan-600 transition-all duration-500 " />
+            {/* names */}
+            {/* <div  className="space-y-1 text-sm"> */}
+              <p className="group-hover:text-cyan-500 space-y-1 text-sm duration-500 transition-all ">{item.i_name}</p>
+              <ArrowUpRight />
+            {/* </div> */}
+            </div>
+          </div>
+        ))}
+
+        </div>
+        </div>
+
+        
+
+        {/* <div className="space-y-2">
+          <p className="font-semibold text-cyan-300 uppercase tracking-wider text-sm">
+            Quick Links
+          </p>
           <ul className="space-y-1 text-gray-300 text-sm">
             <li>
-              <a href="/" className="hover:text-cyan-400 transition-all duration-300">Home</a>
+              <a
+                href="/"
+                className="hover:text-cyan-400 transition-all duration-300"
+              >
+                Home
+              </a>
             </li>
             <li>
-              <a href="/about" className="hover:text-cyan-400 transition-all duration-300">About</a>
+              <a
+                href="/about"
+                className="hover:text-cyan-400 transition-all duration-300"
+              >
+                About
+              </a>
             </li>
             <li>
-              <a href="/projects" className="hover:text-cyan-400 transition-all duration-300">Projects</a>
+              <a
+                href="/projects"
+                className="hover:text-cyan-400 transition-all duration-300"
+              >
+                Projects
+              </a>
             </li>
             <li>
-              <a href="/contact" className="hover:text-cyan-400 transition-all duration-300">Contact</a>
+              <a
+                href="/contact"
+                className="hover:text-cyan-400 transition-all duration-300"
+              >
+                Contact
+              </a>
             </li>
           </ul>
-        </div>
+        </div> */}
 
         {/* Social Media */}
         <div className="space-y-2">
-          <h3 className="font-semibold text-cyan-300 uppercase tracking-wider text-sm">Connect</h3>
+          <p className="font-semibold text-cyan-300 uppercase tracking-wider text-sm">
+            Connect
+          </p>
           <div className="flex gap-4 mt-2">
             {socialIcons.map((icon, i) => (
               <motion.a
@@ -63,8 +118,12 @@ export default function Footer() {
 
         {/* Contact / Newsletter */}
         <div className="space-y-2">
-          <h3 className="font-semibold text-cyan-300 uppercase tracking-wider text-sm">Get in Touch</h3>
-          <p className="text-gray-300 text-sm">Interested in working together? Drop me a message!</p>
+          <p className="font-semibold text-cyan-300 uppercase tracking-wider text-sm">
+            Get in Touch
+          </p>
+          <p className="text-gray-300 text-sm">
+            Interested in working together? Drop me a message!
+          </p>
           <a
             href="mailto:your.email@example.com"
             className="inline-block mt-2 px-5 py-2 rounded-full bg-cyan-500 text-black font-semibold hover:bg-cyan-400 transition-all duration-300"
@@ -76,10 +135,14 @@ export default function Footer() {
 
       {/* Bottom copyright */}
       <div className="mt-12 border-t border-cyan-700 pt-6 text-center text-gray-400 text-sm flex flex-col md:flex-row justify-between items-center gap-2">
-        <span>&copy; {new Date().getFullYear()} Ritesh Tamang. All rights reserved.</span>
-        <span className="text-gray-500 text-xs">Made with ❤️ and React + Tailwind</span>
+        <span>
+          &copy; {new Date().getFullYear()} Ritesh Tamang. All rights reserved.
+        </span>
+        <span className="text-gray-500 text-xs">
+          Made with ❤️ and React + Tailwind
+        </span>
       </div>
-    </footer>
+    </div>
   );
 }
 
@@ -89,4 +152,12 @@ const socialIcons = [
   { icon: Linkedin, link: "https://linkedin.com/" },
   { icon: Instagram, link: "https://instagram.com/" },
   { icon: Github, link: "https://github.com/" },
+];
+
+const quick_links = [
+  { icon: House, i_name: "Home", path: "/" },
+  { icon: UserRound, i_name: "About", path: "/about" },
+  { icon: FileUser, i_name: "Resume", path: "/resume" },
+  { icon: BriefcaseBusiness, i_name: "Project", path: "/portfolio" },
+  { icon: Mail, i_name: "Contact", path: "/contact" },
 ];

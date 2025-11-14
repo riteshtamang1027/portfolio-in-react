@@ -1,4 +1,3 @@
-import Footer_section from './components/footer_section'
 import HeroSection from './components/heroSection'
 import Techstack_section from './components/techstack_section'
 
@@ -8,7 +7,7 @@ export default function App() {
  <div className='space-y-8'>
    <HeroSection/>
    <Techstack_section/>
-  <Footer_section/>
+  
  </div>
     </div>
   )
