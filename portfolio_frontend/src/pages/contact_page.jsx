@@ -1,6 +1,8 @@
 "use client";
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Facebook, Github, Linkedin, Instagram } from "lucide-react";
+import { Link } from "react-router";
+
 
 export default function Contact_section() {
   return (
@@ -51,17 +53,9 @@ export default function Contact_section() {
 
             {/* Social Media Icons */}
             <div className="flex gap-4 ">
-              {[
-                { icon: Facebook, link: "#" },
-                { icon: Linkedin, link: "#" },
-                { icon: Instagram, link: "#" },
-                { icon: Github, link: "#" },
-              ].map(({ icon: Icon, link }, i) => (
-                <motion.a
-                  key={i}
-                  href={link}
-                  target="_blank"
-                  rel="noopener noreferrer"
+              {socialIcons.map((item, index) => (
+                <motion.div
+                  key={index}
                   whileHover={{
                     scale: 1.15,
                     boxShadow: "0 0 10px rgba(34,211,238,0.4)",
@@ -69,8 +63,9 @@ export default function Contact_section() {
                   }}
                   className="p-2 border border-cyan-500/40 rounded-full hover:text-cyan-400 transition"
                 >
-                  <Icon className="w-5 h-5 text-cyan-400" />
-                </motion.a>
+                 <Link to={item.url}>
+                  <item.icon className="w-5 h-5 text-cyan-400" /></Link>
+                </motion.div>
               ))}
             </div>
           </div>
@@ -138,3 +133,11 @@ export default function Contact_section() {
     </div>
   );
 }
+
+
+const socialIcons = [
+  { icon: Facebook,  url: "https://www.facebook.com/riteshlama007/" },
+  { icon: Linkedin,  url: "https://linkedin.com/" },
+  { icon: Instagram,  url: "https://instagram.com/" },
+  { icon: Github, url: "https://github.com/" },
+];
