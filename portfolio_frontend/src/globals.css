@@ -1,0 +1,38 @@
+html.dark {
+  --custom-a0: #1a123d;
+  --custom-a10: #1e2341;
+  --custom-a20: #172a47;
+  --custom-a30: #1c3452;
+  --custom-a40: #203248;
+}
+
+html.light {
+  --custom-a0: #ffffff;
+  --custom-a10: #f7f7f7;
+  --custom-a20: #efefef;
+  --custom-a30: #e5e5e5;
+  --custom-a40: #dcdcdc;
+  /* --text-color: #000000; */
+}
+
+.bg-dark {
+  background: linear-gradient(
+    to_right,
+    var(--custom-a0),
+    var(--custom-a10),
+    var(--custom-a20),
+    var(--custom-a30),
+    var(--custom-a40)
+  );
+}
+
+.bg-light {
+  background: linear-gradient(
+    to_right,
+    var(--custom-a0),
+    var(--custom-a10),
+    var(--custom-a20),
+    var(--custom-a30),
+    var(--custom-a40)
+  );
+}

@@ -1,12 +1,5 @@
 @import "tailwindcss";
 
-:root {
---custom-a0: #1a123d;
---custom-a10: #1e2341;
---custom-a20: #172A47;
---custom-a30: #1c3452;
---custom-a40: #203248;
-}
 
 
 .typed-cursor {
@@ -29,3 +22,53 @@
      66% { color: #06b6d4; }  
    100% { color: #06b6d4; }  
  }
+
+
+ html.dark {
+  --custom-a0: #1a123d;
+  --custom-a10: #1e2341;
+  --custom-a20: #172a47;
+  --custom-a30: #1c3452;
+  --custom-a40: #203248;
+}
+
+html.light {
+  --custom-a0: #ffffff;
+  --custom-a10: #f7f7f7;
+  --custom-a20: #efefef;
+  --custom-a30: #e5e5e5;
+  --custom-a40: #dcdcdc;
+}
+
+
+.bg-dark {
+  background: linear-gradient(
+    to right,
+    var(--custom-a0),
+    var(--custom-a10),
+    var(--custom-a20),
+    var(--custom-a30),
+    var(--custom-a40)
+  );
+}
+
+.bg-light {
+  background: linear-gradient(
+    to right,
+    var(--custom-a0),
+    var(--custom-a10),
+    var(--custom-a20),
+    var(--custom-a30),
+    var(--custom-a40)
+  );
+}
+
+
+
+ /* html.dark{
+  --bg-primary: [linear-gradient(to_right,var(--custom-a0),var(--custom-a10),var(--custom-a20),var(--custom-a30),var(--custom-a40))];
+  --bg-secondary: #1e293b;
+  --text-primary: #ffffff;
+  --accent: #06b6d4;
+ } */
+
