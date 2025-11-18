@@ -29,7 +29,7 @@ export default function Socialmedia_icon() {
                 tooltip: {
                   sx: {
                     bgcolor: "var(--text-secondary)",
-                    color: "black",
+                     color: "var(--tooltip-color)",
                     fontSize: "0.7rem",
                   },
                 },

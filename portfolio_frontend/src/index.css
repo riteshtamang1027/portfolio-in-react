@@ -35,6 +35,9 @@ html.dark {
   /* shadow & border */
   --shadow-glow: 0 0 35px rgba(34, 211, 238, 0.6);
   --border-color: #0ea5e9;
+  --tooltip-color:oklch(21% 0.034 264.665);
+
+
 
 
   /* gradient sectiion */
@@ -70,6 +73,10 @@ html.dark {
     /* shadow & border (light mode) */
   --shadow-glow: 0 0 35px rgba(130, 70, 233, 0.684);
   --border-color: #6b33f6;
+  --tooltip-color:oklch(96.7% 0.003 264.542);
+
+
+
 
   /* gradient sectiion */
   --custom-a0: #faf7ff;

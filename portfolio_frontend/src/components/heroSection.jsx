@@ -5,7 +5,7 @@ import { Link } from "react-router";
 
 export default function HeroSection() {
   return (
-    <div className="text-white">
+    <div className="text-[var(--text-primary)]">
       {/* main container */}
       <motion.div
         initial={{ opacity: 0, x: -100 }}
@@ -70,12 +70,12 @@ export default function HeroSection() {
                 transition={{ duration: 2.5 }}
                 className="flex gap-4 justify-center sm:justify-start"
               >
-                <Link to={"/resume"} className="relative overflow-hidden px-5 py-2 rounded-full font-semibold text-black bg-[var(--text-secondary)]/90 cursor-pointer border-transparent border transition-all duration-500 hover:scale-105 hover:text-[var(--text-hover)] hover:border-[var(--border-radious)] hover:bg-transparent">
+                <Link to={"/resume"} className="relative overflow-hidden px-5 py-2 rounded-full font-semibold text-[var(--tooltip-color)] bg-[var(--text-secondary)]/90 cursor-pointer border-transparent border transition-all duration-500 hover:scale-105 hover:text-[var(--text-hover)] hover:border-[var(--border-radious)] hover:bg-transparent">
                   <span className="relative  whitespace-nowrap">
                     Download CV
                   </span>
                 </Link>
-                <Link to={"/contact"} className="px-5 py-2 rounded-full font-semibold text-[var(--text-hover)] border border-[var(--border-radious)] hover:bg-[var(--text-secondary)]/90 hover:text-black/80 transition-all duration-500 whitespace-nowrap">
+                <Link to={"/contact"} className="px-5 py-2 rounded-full font-semibold text-[var(--text-hover)] border border-[var(--border-radious)] hover:bg-[var(--text-secondary)]/90 hover:text-[var(--tooltip-color)] transition-all duration-500 whitespace-nowrap hover:scale-105">
                   Contact Me
                 </Link>
               </motion.div>

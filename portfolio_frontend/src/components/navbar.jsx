@@ -30,7 +30,7 @@ export default function Navbar() {
                 tooltip: {
                   sx: {
                     bgcolor: "var(--text-secondary)", // tooltip background
-                    color: "black", // tooltip text
+                     color: "var(--tooltip-color)", // tooltip text
                     fontSize: "0.8rem",
                   },
                 },

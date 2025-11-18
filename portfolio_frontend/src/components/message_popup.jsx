@@ -34,7 +34,7 @@ export default function Message_popup() {
     <div className="relative flex items-center">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="inline-block mt-2 px-4 py-2 rounded-full border border-[var(--border-radious)] text-[var(--text-secondary)] font-semibold hover:bg-[var(--text-secondary)]  hover:text-black/80 transition-all duration-500 cursor-pointer"
+        className="inline-block mt-2 px-4 py-2 rounded-full border border-[var(--border-radious)] text-[var(--text-secondary)] font-semibold hover:bg-[var(--text-secondary)]  hover:text-[var(--tooltip-color)]/80 transition-all duration-500 cursor-pointer"
       >
         Email me
       </button>
@@ -108,7 +108,7 @@ export default function Message_popup() {
                   }}
                   transition={{ duration: 0.3 }}
                   type="submit"
-                  className="w-max px-4 py-2 rounded-full bg-[var(--text-secondary)]/80 text-black font-semibold hover:bg-transparent hover:text-[var(--text-hover)] border border-transparent hover:border-[var(--border-radious)] transition-all duration-500 text-sm cursor-pointer hover:scale-105"
+                  className="w-max px-4 py-2 rounded-full bg-[var(--text-secondary)]/80 text-[var(--tooltip-color)] font-semibold hover:bg-transparent hover:text-[var(--text-hover)] border border-transparent hover:border-[var(--border-radious)] transition-all duration-500 text-sm cursor-pointer hover:scale-105"
                 >
                   Send Message
                 </motion.button>

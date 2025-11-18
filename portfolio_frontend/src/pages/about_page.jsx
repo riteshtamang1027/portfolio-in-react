@@ -18,16 +18,16 @@ import "swiper/css/free-mode";
 import "swiper/css/thumbs";
 
 // import required modules
-import { FreeMode, Navigation, Thumbs } from "swiper/modules";
+import { FreeMode,  Thumbs } from "swiper/modules";
 import { Link } from "react-router";
 
 export default function AboutSection() {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   return (
-    <div className=" bg-[linear-gradient(to_right,var(--custom-a0),var(--custom-a10),var(--custom-a20),var(--custom-a30),var(--custom-a40))] h-full xl:px-32 md:px-24 px-4 sm:px-16 py-16">
+    <div className=" bg-gradient h-full xl:px-32 md:px-24 px-4 sm:px-16 py-16">
      
-     <div className="text-white  flex flex-col lg:flex-row items-center gap-12  justify-between ">
+     <div className="text-[var(--text-primary)] flex flex-col lg:flex-row items-center gap-12  justify-between ">
        {/* Profile Image */}
 
       <div className="flex  flex-col items-center justify-center md:w-120 w-88 sm:w-100  gap-8">
@@ -45,10 +45,10 @@ export default function AboutSection() {
           modules={[FreeMode,  Thumbs]}
           className="mySwiper2 w-full h-full cursor-pointer "
         >
-         {Images.map((item, i) => (
-            <SwiperSlide key={i} className=" border border-cyan-600 rounded-xl overflow-hidden">
+         {Images.map((item, index) => (
+            <SwiperSlide key={index} className=" border border-[var(--border-radious)] rounded-xl overflow-hidden ">
               <img
-                className="w-full rounded-xl hover:scale-110 duration-300 object-cover"
+                className="w-full h-full rounded-xl hover:scale-110 duration-300 object-cover"
                 src={item.url}
                 alt={item.im_name}
               />
@@ -75,7 +75,7 @@ export default function AboutSection() {
           className="mySwiper w-full  rounded-xl pt-2! "
         >
           {Images.map((item, i) => (
-            <SwiperSlide key={i} className="border border-cyan-600 rounded-xl  cursor-pointer hover:-translate-y-2 overflow-hidden duration-300">
+            <SwiperSlide key={i} className="border border-[var(--border-radious)] rounded-xl  cursor-pointer hover:-translate-y-2 overflow-hidden duration-300">
                 <img
                 className="w-full h-24 rounded-xl hover:scale-105 duration-300 object-cover"
                 src={item.url}
@@ -95,45 +95,45 @@ export default function AboutSection() {
         transition={{ duration: 1 }}
         className="space-y-8"
       >
-        <p className="text-3xl md:text-4xl font-bold  text-cyan-400">
+        <p className="text-3xl md:text-4xl font-bold  text-[var(--text-secondary)]">
           About Me
         </p>
-       <div className="space-y-4">
+       <div className="space-y-4 ">
          
-        <p className="text-gray-300 leading-relaxed">
-          Hi, I’m <span className="text-white font-semibold">Ritesh</span>, a
+        <p className="text-[var(--text-primary)]/80 leading-relaxed">
+          Hi, I’m <span className="text-[var(--text-primary)] font-semibold">Ritesh</span>, a
           passionate{" "}
-          <span className="text-cyan-400 font-semibold">
+          <span className="text-[var(--text-secondary)] font-semibold">
             React and Next.js developer
           </span>{" "}
           from Kathmandu, Nepal. I love building clean, responsive, and
           user-friendly web applications that bring ideas to life.
         </p>
 
-        <p className="text-gray-300 leading-relaxed mb-4">
+        <p className="text-[var(--text-primary)]/80 leading-relaxed mb-4">
           My journey into web development started with curiosity about how
           websites work. Since then, I’ve been developing projects using{" "}
-          <span className="text-white font-semibold">
+          <span className="text-[var(--text-primary)]/90 font-semibold">
             React, Next.js, TypeScript, Tailwind CSS, PostgreSQL, Drizzle ORM
           </span>
-          , and <span className="text-white font-semibold">Cloudinary</span>.
+          , and <span className="text-[var(--text-primary)]/90 font-semibold">Cloudinary</span>.
         </p>
 
-        <p className="text-gray-300 leading-relaxed mb-4">
+        <p className="text-[var(--text-primary)]/80 leading-relaxed mb-4">
           I enjoy crafting smooth user experiences, writing clean code, and
           exploring new technologies that push my creativity. My goal is to grow
           as a full-stack developer and collaborate with teams that care about
           design, performance, and innovation.
         </p>
 
-        <p className="text-gray-300 leading-relaxed">
+        <p className="text-[var(--text-primary)]/80 leading-relaxed">
           When I’m not coding, I’m usually exploring new UI trends, tweaking
           designs, or helping my little sister{" "}
-          <span className="text-white font-semibold">Kushum</span> with her
+          <span className="text-[var(--text-primary)]/90 font-semibold">Kushum</span> with her
           studies. If you’d like to connect or collaborate, feel free to{" "}
           <Link to={"/contact"}
             href="#contact"
-            className="text-cyan-400 hover:underline underline-offset-2"
+            className="text-[var(--text-secondary)] hover:underline underline-offset-2"
           >
             reach out
           </Link>
@@ -157,8 +157,8 @@ export default function AboutSection() {
               componentsProps={{
                 tooltip: {
                   sx: {
-                    bgcolor: "#0891b2", // tooltip background
-                    color: "black", // tooltip text
+                   bgcolor: "var(--text-secondary)", // tooltip background
+                    color: "var(--tooltip-color)", // tooltip text
                     fontSize: "0.9rem",
                   },
                 },
@@ -166,12 +166,12 @@ export default function AboutSection() {
             >
               <motion.div
                 whileHover={{
-                  borderColor: "#22d3ee",
-                  boxShadow: "0px 0px 15px rgba(34, 211, 238, 0.35)",
+                  borderColor: "var(--border-color)",
+                  boxShadow: "var(--shadow-glow)",
                 }}
-                className="p-3 rounded-xl  bg-gray-800/50 border border-cyan-500/30 transition-all duration-500 hover:scale-110 cursor-pointer"
+                className="p-3 rounded-xl  bg-[var(--bg-secondary)]/70 border border-[var(--border-radious)]/30 transition-all duration-500 hover:scale-110 cursor-pointer"
               >
-                <Icon.icon className="w-6 h-6 text-cyan-400" />
+                <Icon.icon className="w-6 h-6 text-[var(--text-secondary)]" />
               </motion.div>
             </Tooltip>
           ))}
