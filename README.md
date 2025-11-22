@@ -19,3 +19,7 @@ It showcases my projects, skills, and provides an easy way to contact me.
 **Database:** MongoDB 
 **Other Tools:** Cloudinary, Vite, Lucid.dev
 
+### Home Page
+![Home page](./screenshot/homepage.png)
+
+
