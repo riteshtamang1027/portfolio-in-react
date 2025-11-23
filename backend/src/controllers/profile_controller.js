@@ -15,7 +15,9 @@ export const create_profile = async (req, res) => {
       message: "Profile created successfully.",
       data: new_create_profile,
     });
-  } catch (error) {
+  } catch (error) { 
+    console.log(error)
     return res.status(500).json("Internal server error.", error);
   }
+  
 };
