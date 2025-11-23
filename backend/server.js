@@ -2,12 +2,15 @@ import express from "express";
 import connectDB from "./src/db.js";
 import dotenv from "dotenv";
 dotenv.config();
+import profile_route from './src/routes/profile_route.js'
 
 const app = express();
 
 // mongoDB connection
 connectDB();
 
+
+app.use("/profile",profile_route)
 
 
 

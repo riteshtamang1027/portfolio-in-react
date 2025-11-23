@@ -7,7 +7,6 @@ const portfolioSchema = new mongoose.Schema({
     require: true,
   },
   skills: { type: String, required: true },
-  cv: { type: String, require: true },
 });
 
 export const protfolio_profile = mongoose.model("portfolio", portfolioSchema);
