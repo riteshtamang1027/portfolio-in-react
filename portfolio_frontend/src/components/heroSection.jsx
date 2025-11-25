@@ -3,12 +3,30 @@ import { Typewriter } from "react-simple-typewriter";
 import { motion } from "framer-motion";
 import { Link } from "react-router";
 import img1 from '../../public/images/img5.jpeg'
+import axios from 'axios'
+import { useEffect } from "react";
+import { useState } from "react";
 
 export default function HeroSection() {
+  const [User, setUser] = useState();
   
-const fetchuserProfile = ()=>{
-  
+const fetchuserProfile =async ()=>{
+  try {
+    const Response = await axios.get("http://localhost:4000/profile");
+    console.log(Response.data.data)
+    setUser(Response.data.data[0])
+    
+  } catch (error) {
+    console.log("Something went wrong to fetching user profile.",error)
+    
+  }
+
 }
+
+useEffect(()=>{
+  fetchuserProfile()
+
+},[])
 
   return (
     <div className="text-[var(--text-primary)]">
@@ -30,7 +48,10 @@ const fetchuserProfile = ()=>{
         </motion.p>
 
         {/* content */}
-        <div className="flex flex-col md:flex-row items-center justify-between w-full xl:gap-16 gap-4 py-2 sm:px-4">
+
+        {
+          User &&
+            <div className="flex flex-col md:flex-row items-center justify-between w-full xl:gap-16 gap-4 py-2 sm:px-4">
           {/* LEFT SECTION */}
           <div className="md:w-2/3 space-y-8 md:order-1 order-2 max-md:text-center py-2 max-md:px-4">
             {/* introduction */}
@@ -44,7 +65,7 @@ const fetchuserProfile = ()=>{
                 <p className="text-xl font-bold opacity-90 text-[var(--text-primary)]">
                   Hi, I'm
                 </p>
-                <p className="lg:text-3xl text-2xl font-bold text-[var(--text-secondary)] ">{`Ritesh Tamang`}</p>
+                <p className="lg:text-3xl text-2xl font-bold text-[var(--text-secondary)] ">{User.user_name}</p>
               </div>
 
               <p className="lg:text-2xl text-xl font-bold text-[var(--text-primary)]">
@@ -111,6 +132,8 @@ const fetchuserProfile = ()=>{
             />
           </motion.div>
         </div>
+        }
+      
       </motion.div>
     </div>
   );
