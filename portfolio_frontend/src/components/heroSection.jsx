@@ -2,7 +2,7 @@
 import { Typewriter } from "react-simple-typewriter";
 import { motion } from "framer-motion";
 import { Link } from "react-router";
-import img1 from '../../public/images/img5.jpeg'
+// import img1 from '../../public/images/img5.jpeg'
 import axios from 'axios'
 import { useEffect } from "react";
 import { useState } from "react";
@@ -72,7 +72,7 @@ useEffect(()=>{
                 I'm{" "}
                 <span className="text-[var(--text-secondary)] ">
                   <Typewriter
-                    words={["Frontend Developer", "Learning Next.Js"]}
+                    words={[`${User.skills} `, `Learning Next.Js`]}
                     loop={Infinity}
                     cursor
                     cursorStyle="|"
@@ -127,7 +127,8 @@ useEffect(()=>{
           >
             <img
               className="w-full h-full object-cover rounded-full hover:scale-110 duration-500"
-              src={img1}
+              src={User.profile_picture}
+              
               alt="Profile"
             />
           </motion.div>
