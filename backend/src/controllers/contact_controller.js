@@ -1,10 +1,10 @@
 import nodemiler from "nodemailer";
-import dotenv from 'dotenv'
- dotenv.config()
+import dotenv from "dotenv";
+dotenv.config();
 export const createContact = async (req, res) => {
   try {
     const { name, email, message } = req.body;
-    console.log( name, email, message )
+    console.log(name, email, message);
 
     // check user fill or not
     if (!name || !email || !message) {
@@ -40,9 +40,11 @@ export const createContact = async (req, res) => {
     // send email
 
     await transport.sendMail(mailOption);
-    return res.status(200).json({ message: "Message sent successfully!" });
+    return res.status(200).json({ message: "Message sent successfully!",
+      
+     });
   } catch (error) {
-    console.log(error)
+    console.log(error);
     return res.status(500).json({
       message: "Internal server error.",
       error,

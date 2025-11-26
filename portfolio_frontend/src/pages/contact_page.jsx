@@ -10,8 +10,45 @@ import {
   Instagram,
 } from "lucide-react";
 import { Link } from "react-router";
+import axios from 'axios';
+// import dotenv from 'dotenv';
+import { useState } from "react";
+// dotenv.config()
 
 export default function Contact_section() {
+
+  const [form, setForm] = useState({
+    name:"",
+    email:"",
+    message:""
+  });
+
+  const [loading, setLoading] = useState(false);
+
+  const handleChange =()=>{
+    setForm({...form,[e.target.name]:e.target.value})
+  }
+
+
+  const handleSubmit =async(e)=>{
+    e.preventDefault();
+    setLoading(true);
+    try {
+      const response =await axios.post(`http://localhost:4000/contac`,{
+        name:form.name.trim(),
+        email:form.email.trim(),
+        message:form.message.tirm()
+      })
+      
+    } catch (error) {
+      console.log(error)
+      
+      
+    }
+    setLoading(false)
+  }
+
+
   return (
     <div className="text-[var(--text-primary)] min-h-screen w-full py-12 xl:px-64 lg:px-32 md:px-16 px-8 sm:px-32 bg-[linear-gradient(to_right,var(--custom-a0),var(--custom-a10),var(--custom-a20),var(--custom-a30),var(--custom-a40))]">
       <motion.div
@@ -81,17 +118,12 @@ export default function Contact_section() {
           </motion.div>
 
           {/* Right: Contact Form */}
-          <motion.form
+          <motion.form onSubmit={handleSubmit}
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             className="bg-[var(--bg-secondary)] border border-[var(--text-secondary)]/20 rounded-2xl p-6 shadow-lg space-y-4"
-            onSubmit={(e) => {
-              e.preventDefault();
-              alert(
-                "Message Sent Successfully! (You can integrate EmailJS or API later)"
-              );
-            }}
+           
           >
             <p className="text-xl font-semibold text-[var(--text-secondary)]">
               Send a Message
@@ -102,6 +134,10 @@ export default function Contact_section() {
                 <label className="text-sm opacity-80">Your Name</label>
                 <input
                   type="text"
+                  name="name"
+                  onChange={handleChange}
+                  value={form.name}
+                  disabled={loading}
                   required
                   placeholder="Enter your name"
                   className="w-full mt-1 p-2 rounded-md bg-[var(--footer-bg_hover)]/10 border border-[var(--border-color)] text-sm outline-none focus:border-[var(--text-secondary)] transition"
@@ -111,6 +147,10 @@ export default function Contact_section() {
                 <label className="text-sm opacity-80">Your Email</label>
                 <input
                   type="email"
+                  name="email"
+                  onChange={handleChange}
+                  value={form.email}
+                  disabled={loading}
                   required
                   placeholder="Enter your email"
                   className="w-full mt-1 p-2 rounded-md bg-[var(--footer-bg_hover)]/10 border border-[var(--border-color)] text-sm outline-none focus:border-[var(--text-secondary)] transition"
@@ -120,6 +160,10 @@ export default function Contact_section() {
                 <label className="text-sm opacity-80">Message</label>
                 <textarea
                   rows="4"
+                  name="message"
+                  onChange={handleChange}
+                  value={form.message}
+                  disabled={loading}
                   required
                   placeholder="Write your message..."
                   className="w-full mt-1 p-2 rounded-md bg-[var(--footer-bg_hover)]/10 border border-[var(--border-color)] text-sm outline-none focus:border-[var(--text-secondary)] transition"
@@ -134,7 +178,10 @@ export default function Contact_section() {
                 type="submit"
                 className="w-max px-4 py-2 rounded-full bg-[var(--text-secondary)] text-[var(--tooltip-color)] font-semibold hover:bg-transparent hover:text-[var(--text-secondary)] border border-transparent hover:border-[var(--text-secondary)] transition-all duration-500 cursor-pointer"
               >
-                Send Message
+                {
+                  loading ? "sending...": "send Message"
+                }
+                {/* Send Message */}
               </motion.button>
             </div>
           </motion.form>

@@ -14,7 +14,7 @@ const fetchuserProfile =async ()=>{
   try {
     const Response = await axios.get("http://localhost:4000/profile");
     console.log(Response.data.data)
-    setUser(Response.data.data[0])
+    setUser(Response.data.data)
     
   } catch (error) {
     console.log("Something went wrong to fetching user profile.",error)
