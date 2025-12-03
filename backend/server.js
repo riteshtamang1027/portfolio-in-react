@@ -20,7 +20,8 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
-      "https://portfoliobasedonreactjs-nwgujow47-ritesh-tamangs-projects.vercel.app"
+      "https://portfoliobasedonreactjs.vercel.app",
+      // "https://portfoliobasedonreactjs-nwgujow47-ritesh-tamangs-projects.vercel.app"
     ],
     credentials: true,
   })
