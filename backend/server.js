@@ -13,8 +13,7 @@ app.use(express.json());
 // Middleware to parse URL-encoded data (if sending from HTML form)
 app.use(express.urlencoded({ extended: true }));
 
-// mongoDB connection
-connectDB();
+
 
 app.use(
   cors({
@@ -24,9 +23,14 @@ app.use(
       // "https://portfoliobasedonreactjs-nwgujow47-ritesh-tamangs-projects.vercel.app"
     ],
     credentials: true,
+     credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization']
   })
 );
 
+// mongoDB connection
+connectDB();
 
 // profile route
 app.use("/profile", profile_route);
