@@ -41,9 +41,9 @@ export default function Edit_profile() {
       </div>
 
       {Isopen && (
-        <div className="w-max absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 px-8 py-8 z-50 bg-gray-200 rounded-xl justify-items-center space-y-8">
+        <div className="w-100 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 px-8 py-8 z-50 bg-gray-200/90 rounded-xl  space-y-8">
           {/* image edit section */}
-          <div>
+          <div className="flex items-center justify-center">
             <img
               className="rounded-full w-64 h-64  object-cover"
               src="https://images.unsplash.com/photo-1761839258044-e59f324b5a7f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxNXx8fGVufDB8fHx8fA%3D%3D"
@@ -58,7 +58,7 @@ export default function Edit_profile() {
               <input
                 type="text"
                 value={`Ritesh Tamang`}
-                className="border border-gray-600 rounded-sm px-2 py- focus:outline-none"
+                className="border-b border-gray-600 rounded-sm px-2 py-1 focus:outline-none"
                 placeholder="Ritesh Tamang"
               />
             </div>
