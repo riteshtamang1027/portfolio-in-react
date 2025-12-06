@@ -103,7 +103,6 @@ export default function Message_popup() {
 
                 <motion.button
                   whileHover={{
-                    
                     boxShadow: "var(--shadow-glow)",
                   }}
                   transition={{ duration: 0.3 }}
