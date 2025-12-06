@@ -1,4 +1,5 @@
 import { SignOutButton } from "@clerk/clerk-react";
+import Edit_profile from "../dashboard/edit_profile";
 
 export default function Admin_dashboard() {
   return (
@@ -12,6 +13,7 @@ export default function Admin_dashboard() {
       </div>
 
       <div className="grid grid-cols-3 gap-6">
+        <Edit_profile/>
         <div className="p-6 bg-white shadow rounded-xl">Manage Projects</div>
         <div className="p-6 bg-white shadow rounded-xl">Manage Blogs</div>
         <div className="p-6 bg-white shadow rounded-xl">Messages</div>

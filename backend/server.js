@@ -10,24 +10,21 @@ import cors from "cors";
 const app = express();
 app.use(express.json());
 
-// Middleware to parse URL-encoded data (if sending from HTML form)
-app.use(express.urlencoded({ extended: true }));
-
-
-
 app.use(
   cors({
     origin: [
       "http://localhost:5173",
       "https://portfoliobasedonreactjs.vercel.app",
-      // "https://portfoliobasedonreactjs-nwgujow47-ritesh-tamangs-projects.vercel.app"
     ],
     credentials: true,
-     credentials: true,
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization']
+
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
+
+// Middleware to parse URL-encoded data (if sending from HTML form)
+app.use(express.urlencoded({ extended: true }));
 
 // mongoDB connection
 connectDB();

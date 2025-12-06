@@ -33,7 +33,7 @@ export default function Main() {
           <BrowserRouter>
             <App_content />
           </BrowserRouter>
-          ,
+          
         </ClerkProvider>
       </Theme_provider>
     </StrictMode>
