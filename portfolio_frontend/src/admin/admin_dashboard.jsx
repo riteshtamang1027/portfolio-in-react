@@ -5,14 +5,14 @@ export default function Admin_dashboard() {
   return (
     <div className="min-h-screen p-10 bg-gray-100">
       <div className="flex justify-between items-center mb-8">
-        <p className="text-3xl font-bold">Admin Dashboard</p>
+        <p className="md:text-3xl text-xl font-bold">Admin Dashboard</p>
 
-        <SignOutButton className="border text-base font-semibold  border-gray-400 px-4 py-2 rounded-xl text-white bg-red-600 cursor-pointer">
+        <SignOutButton className="border md:text-base text-sm font-semibold  border-gray-400 md:px-4 md:py-2 px-2 py-1 md:rounded-xl rounded-md text-white bg-red-600 cursor-pointer whitespace-nowrap">
           <span className="">Log Out</span>
         </SignOutButton>
       </div>
 
-      <div className="grid grid-cols-3 gap-6">
+      <div className="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-6 gap-4">
         <Edit_profile/>
         <div className="p-6 bg-white shadow rounded-xl">Manage Projects</div>
         <div className="p-6 bg-white shadow rounded-xl">Manage Blogs</div>
