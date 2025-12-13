@@ -59,6 +59,7 @@ html.dark {
 
 }
 
+
 :root {
   --text-primary: #0f172a;
   --text-secondary:oklch(58.5% 0.233 277.117);
@@ -117,6 +118,16 @@ html.dark {
     var(--custom-a30),
     var(--custom-a40)
   );
+}
+
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
 }
 
 /* html.dark{

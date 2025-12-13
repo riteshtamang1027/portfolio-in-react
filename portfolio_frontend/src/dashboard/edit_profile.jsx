@@ -46,7 +46,7 @@ export default function Edit_profile() {
       </div>
 
       {Isopen && (
-        <div className="w-100 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 px-8 py-4 z-50 bg-gray-200/90 rounded-xl mt-4 space-y-8">
+        <div className="w-100 max-h-[90vh] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 px-8 py-4 z-50 bg-gray-200/90 rounded-xl space-y-8 overflow-y-auto scroll-smooth hide-scrollbar">
           {/* image edit section */}
           <div className="flex items-center justify-center">
             <img
