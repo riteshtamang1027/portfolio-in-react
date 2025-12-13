@@ -56,8 +56,8 @@ export default function Edit_profile() {
       </div>
 
       {Isopen && (
-        <div className="md:w-100 w-max max-h-[90vh] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 bg-gray-300 rounded-xl  overflow-y-auto scroll-smooth hide-scrollbar">
-          <p className="text-xl max-sm:text-lg font-bold px-4 py-2 border-b border-gray-500  h-full sticky top-0 bg-gray-300">
+        <div className="md:w-100 w-max max-h-[90vh] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 bg-gray-200 rounded-xl  overflow-y-auto scroll-smooth hide-scrollbar">
+          <p className="text-xl max-sm:text-lg  font-bold px-4 py-2 border-b border-gray-500  h-full sticky top-0 bg-gray-200">
             Edit Your profile
           </p>
           <div className="px-8 py-4 space-y-8 ">
@@ -74,7 +74,9 @@ export default function Edit_profile() {
             <div className="space-y-4">
               {/* you can change your name */}
               <div className="space-y-1 flex flex-col">
-                <label className="text-lg max-sm:text-base font-semibold ">Your Name:</label>
+                <label className="text-lg max-sm:text-base font-semibold ">
+                  Your Name:
+                </label>
                 <input
                   type="text"
                   value={`Ritesh Tamang`}
@@ -85,7 +87,9 @@ export default function Edit_profile() {
 
               {/* add skill */}
               <div className="space-y-4">
-                <label className="text-lg max-sm:text-base font-semibold ">Skills:</label>
+                <label className="text-lg max-sm:text-base font-semibold ">
+                  Skills:
+                </label>
                 <ul className="list-disc list-inside max-sm:text-sm ml-2">
                   <li>Frontend Development</li>
                   <li>UI/UX Design</li>
@@ -105,7 +109,7 @@ export default function Edit_profile() {
                 <textarea
                   type="text"
                   className="border-b text-sm border-gray-600 max-sm:text-sm rounded-sm px-1 py-1 focus:outline-none"
-                  placeholder="Add information"
+                  placeholder="Description must be between 100 and 400 words."
                 />
               </div>
             </div>
