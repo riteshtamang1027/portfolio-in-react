@@ -14,11 +14,23 @@ export default function Edit_profile() {
       document.body.style.overflow = "auto";
     };
   }, [Isopen]);
+  const [uname, setUname] = useState("");
+  const [info, setInfo] = useState("");
+  const [img, setImg] = useState(null);
+  const [skills, setSkills] = useState("");
+
 
   const handleSubmit = async () => {
+  const  formdata =new FormData()
+    formdata.append("user_name",uname)
+    formdata.append("skills",skills)
+    formdata.append("profile_picture",img)
+    formdata.append("description",info)
+
     try {
-      const responsive = await axios.post("http://localhost:5174/admin");
-        
+      const responsive = await axios.post("http://localhost:5174/admin",formdata);
+      console.log(responsive.data.data)
+
 
     } catch (error) {
       console.log(error);
