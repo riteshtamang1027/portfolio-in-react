@@ -1,3 +1,4 @@
+import axios from "axios";
 import { Pencil, Plus } from "lucide-react";
 import { useEffect, useState } from "react";
 
@@ -13,6 +14,16 @@ export default function Edit_profile() {
       document.body.style.overflow = "auto";
     };
   }, [Isopen]);
+
+  const handleSubmit = async () => {
+    try {
+      const responsive = await axios.post("http://localhost:5174/admin");
+        
+
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <div className="w-full">

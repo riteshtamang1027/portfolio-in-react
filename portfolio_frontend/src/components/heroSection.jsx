@@ -2,7 +2,6 @@
 import { Typewriter } from "react-simple-typewriter";
 import { motion } from "framer-motion";
 import { Link } from "react-router";
-// import img1 from '../../public/images/img5.jpeg'
 import axios from 'axios'
 import { useEffect } from "react";
 import { useState } from "react";
