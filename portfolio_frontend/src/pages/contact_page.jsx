@@ -193,7 +193,7 @@ export default function Contact_section() {
 
 const socialIcons = [
   { icon: Facebook, url: "https://www.facebook.com/riteshlama007/" },
-  { icon: Linkedin, url: "https://linkedin.com/" },
-  { icon: Instagram, url: "https://instagram.com/" },
-  { icon: Github, url: "https://github.com/" },
+  { icon: Linkedin, url: "https://www.linkedin.com/in/ritesh-lama-62887435b" },
+  { icon: Instagram, url: "https://www.instagram.com/riteshlama1027" },
+  { icon: Github, url: "https://github.com/riteshtamang1027riteshtamang1027" },
 ];
