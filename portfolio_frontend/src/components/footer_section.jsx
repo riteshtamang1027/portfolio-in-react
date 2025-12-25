@@ -122,9 +122,21 @@ const socialIcons = [
     s_name: "Facebook",
     url: "https://www.facebook.com/riteshlama007/",
   },
-  { icon: Linkedin, s_name: "Linkdin", url: "https://www.linkedin.com/in/ritesh-lama-62887435b" },
-  { icon: Instagram, s_name: "Instagram", url: "https://www.instagram.com/riteshlama1027" },
-  { icon: Github, s_name: "Github", url: "https://github.com/riteshtamang1027" },
+  {
+    icon: Linkedin,
+    s_name: "Linkdin",
+    url: "https://www.linkedin.com/in/ritesh-lama-62887435b",
+  },
+  {
+    icon: Instagram,
+    s_name: "Instagram",
+    url: "https://www.instagram.com/riteshlama1027",
+  },
+  {
+    icon: Github,
+    s_name: "Github",
+    url: "https://github.com/riteshtamang1027",
+  },
 ];
 
 const quick_links = [
