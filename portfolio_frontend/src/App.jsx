@@ -14,6 +14,7 @@ export default function App() {
         <About_section/>
         <Techstack_section />
         <Category_section/>
+       
       </div>
     </div>
   );

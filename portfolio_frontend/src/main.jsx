@@ -1,7 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
-import toast, { Toaster } from 'react-hot-toast';
+import toast, { Toaster } from "react-hot-toast";
 
 import App from "./App.jsx";
 import { BrowserRouter, Route, Routes, useLocation } from "react-router";
@@ -16,6 +16,7 @@ import Theme_toggle from "./components/theme_toggle.jsx";
 import Admin_dashboard from "./admin/admin_dashboard.jsx";
 import { ClerkProvider } from "@clerk/clerk-react";
 import Admin_route from "./components/adminRoute.jsx";
+import Setting from "./components/setting.jsx";
 
 // Public key
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
@@ -33,7 +34,6 @@ export default function Main() {
           <BrowserRouter>
             <App_content />
           </BrowserRouter>
-          
         </ClerkProvider>
       </Theme_provider>
     </StrictMode>
@@ -51,12 +51,17 @@ const App_content = () => {
           <Navbar />
         </div>
       )}
+
+      <div className="fixed md:right-1/12 right-8 top-1/2 -translate-y-1/2 z-10">
+        <Setting />
+      </div>
+
       {/* show theme toggle  only  if not admin page */}
-      {!isAdminpage && (
+      {/* {!isAdminpage && (
         <div className="fixed md:right-1/12 right-8 top-1/2 -translate-y-1/2 z-50">
           <Theme_toggle />
         </div>
-      )}
+      )} */}
 
       <Routes>
         <Route path="/" element={<App />} />
@@ -80,7 +85,7 @@ const App_content = () => {
           <Footer_section />
         </div>
       )}
-       <Toaster />
+      <Toaster />
     </>
   );
 };
