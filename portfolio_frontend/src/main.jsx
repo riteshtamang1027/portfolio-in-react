@@ -51,10 +51,10 @@ const App_content = () => {
           <Navbar />
         </div>
       )}
-
+{!isAdminpage &&
       <div className="fixed md:right-1/12 right-8 top-1/2 -translate-y-1/2 z-10">
         <Setting />
-      </div>
+      </div>}
 
       {/* show theme toggle  only  if not admin page */}
       {/* {!isAdminpage && (

@@ -30,7 +30,7 @@ export default function Setting() {
 
       <button
         onClick={() => setisOpen(!isOpen)}
-        className="cursor-pointer  text-white"
+        className="cursor-pointer  text-[var(--text-secondary)]/90"
       >
         <Cog size={32} />
       </button>
