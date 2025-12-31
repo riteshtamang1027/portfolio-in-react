@@ -1,7 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
-import toast, { Toaster } from "react-hot-toast";
+import  { Toaster } from "react-hot-toast";
 
 import App from "./App.jsx";
 import { BrowserRouter, Route, Routes, useLocation } from "react-router";
@@ -51,17 +51,11 @@ const App_content = () => {
           <Navbar />
         </div>
       )}
-{!isAdminpage &&
-      <div className="fixed md:right-1/12 right-8 top-1/2 -translate-y-1/2 z-10">
-        <Setting />
-      </div>}
-
-      {/* show theme toggle  only  if not admin page */}
-      {/* {!isAdminpage && (
-        <div className="fixed md:right-1/12 right-8 top-1/2 -translate-y-1/2 z-50">
-          <Theme_toggle />
+      {!isAdminpage && (
+        <div className="fixed md:right-1/12 right-8 top-1/2 -translate-y-1/2 z-10">
+          <Setting />
         </div>
-      )} */}
+      )}
 
       <Routes>
         <Route path="/" element={<App />} />
