@@ -26,7 +26,7 @@ export default function Edit_profile() {
     try {
       const formdata = new FormData();
       formdata.append("user_name", uname);
-      // formdata.append("skills", skills);
+      formdata.append("skills", skills);
       formdata.append("profile_picture", img);
       formdata.append("description", info);
       const responsive = await axios.post(
