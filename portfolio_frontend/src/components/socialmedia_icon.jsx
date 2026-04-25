@@ -8,16 +8,16 @@ export default function Socialmedia_icon() {
   return (
     <motion.div
     initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 2.5, delay: 0.8 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.8, delay: 0.2 }}
     className="space-y-8">
       <p className="text-3xl font-bold max-sm:text-2xl text-[var(--text-secondary)]">
         Social Links
       </p>{" "}
       <motion.div
-        initial={{ opacity: 0, y: 40 }}
+        initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, delay: 0.8 }}
+        transition={{ duration: 0.8, delay: 0.3 }}
         className="flex items-center gap-4"
       >
         {mediaIcon.map((Icon, index) => (

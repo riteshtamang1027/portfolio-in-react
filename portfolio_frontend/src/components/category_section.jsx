@@ -6,9 +6,9 @@ export default function Category_section() {
   return (
     <div className="text-[var(--text-primary)]   w-full space-y-8">
       <motion.p
-        initial={{ opacity: 0, y: -20 }}
+      initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 0.8 }}
         className="text-3xl md:text-4xl font-bold text-[var(--text-secondary)] text-center "
       >
         My Expertise

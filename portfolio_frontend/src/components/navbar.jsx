@@ -14,9 +14,11 @@ export default function Navbar() {
   const [activeIndex, setActiveIndex] = useState(0);
   return (
     <motion.div
-      initial={{ opacity: 0, x: 100 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      transition={{ duration: 1, delay: 0.5 }}
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+
+      
       className="relative top-5  xl:px-64 lg:px-32 md:px-16 px-8 sm:px-32 flex items-center justify-center"
     >
       <div className="md:w-max w-full z-20 px-4 py-2 bg-[var(--bg-navbar)]/70 shadow-2xl rounded-2xl border border-[var(--border-radious)]">
@@ -37,9 +39,9 @@ export default function Navbar() {
               }}
             >
               <motion.div
-                initial={{ opacity: 0, x: 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 1, delay: 0.8 }}
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
               >
                 <Link
                   to={item.path}

@@ -9,9 +9,9 @@ export default function About_section() {
       <div className="flex flex-col md:flex-row items-center md:gap-24 gap-8">
         {/* LEFT SECTION - IMAGE */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
+          initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1.5 }}
+          transition={{ duration: 0.8 }}
           className="md:w-1/3"
         >
           <img
@@ -23,9 +23,9 @@ export default function About_section() {
 
         {/* RIGHT SECTION - TEXT */}
         <motion.div
-          initial={{ opacity: 0, x: 40 }}
+          initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1.5 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
           className="md:w-2/3 space-y-4"
         >
           <p className="text-base md:text-lg font-medium opacity-90 leading-relaxed">
