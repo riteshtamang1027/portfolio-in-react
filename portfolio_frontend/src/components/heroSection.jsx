@@ -5,27 +5,10 @@ import { Link } from "react-router";
 import axios from 'axios'
 import { useEffect } from "react";
 import { useState } from "react";
+import portfoloiImage from '../../public/images/img5.jpeg'
 
 export default function HeroSection() {
-  const [User, setUser] = useState();
-  
-const fetchuserProfile =async ()=>{
-  try {
-    const Response = await axios.get(`${import.meta.env.VITE_BACKEND_SERVER}/profile`);
-    console.log(Response.data.data)
-    setUser(Response.data.data)
-    
-  } catch (error) {
-    console.log("Something went wrong to fetching user profile.",error)
-    
-  }
-
-}
-
-useEffect(()=>{
-  fetchuserProfile()
-
-},[])
+ 
 
   return (
     <div className="text-[var(--text-primary)]">
@@ -49,7 +32,7 @@ useEffect(()=>{
         {/* content */}
 
         {
-          User &&
+          
             <div className="flex flex-col md:flex-row items-center justify-between w-full xl:gap-16 gap-4 py-2 sm:px-4">
           {/* LEFT SECTION */}
           <div className="md:w-2/3 space-y-8 md:order-1 order-2 max-md:text-center py-2 max-md:px-4">
@@ -64,14 +47,14 @@ useEffect(()=>{
                 <p className="text-xl font-bold opacity-90 text-[var(--text-primary)]">
                   Hi, I'm
                 </p>
-                <p className="lg:text-3xl text-2xl font-bold text-[var(--text-secondary)] ">{User.user_name}</p>
+                <p className="lg:text-3xl text-2xl font-bold text-[var(--text-secondary)] ">Ritesh Tamang</p>
               </div>
 
               <p className="lg:text-2xl text-xl font-bold text-[var(--text-primary)]">
                 I'm{" "}
                 <span className="text-[var(--text-secondary)] ">
                   <Typewriter
-                    words={[`${User.skills} `, `Learning Next.Js`]}
+                    words={[`MERN stack developer`, `Learning Next.Js`]}
                     loop={Infinity}
                     cursor
                     cursorStyle="|"
@@ -126,7 +109,7 @@ useEffect(()=>{
           >
             <img
               className="w-full h-full object-cover rounded-full hover:scale-110 duration-500"
-              src={User.profile_picture}
+              src={portfoloiImage}
               
               alt="Profile"
             />

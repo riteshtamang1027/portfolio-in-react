@@ -13,28 +13,18 @@ import Portfolio_section from "./pages/portfolio_page.jsx";
 import Footer_section from "./components/footer_section.jsx";
 import { Theme_provider } from "./theme_provider.jsx";
 import Theme_toggle from "./components/theme_toggle.jsx";
-import Admin_dashboard from "./admin/admin_dashboard.jsx";
-import { ClerkProvider } from "@clerk/clerk-react";
-import Admin_route from "./components/adminRoute.jsx";
+
 import Setting from "./components/setting.jsx";
 
-// Public key
-const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
-
-if (!PUBLISHABLE_KEY) {
-  throw new Error("Missing Publishable Key");
-}
 
 export default function Main() {
-  // const location = useLocation();
   return (
     <StrictMode>
       <Theme_provider>
-        <ClerkProvider publishableKey={PUBLISHABLE_KEY}>
           <BrowserRouter>
             <App_content />
           </BrowserRouter>
-        </ClerkProvider>
+        
       </Theme_provider>
     </StrictMode>
   );
@@ -42,31 +32,21 @@ export default function Main() {
 
 const App_content = () => {
   const location = useLocation();
-  const isAdminpage = location.pathname.startsWith("/admin");
+  // const isAdminpage = location.pathname.startsWith("/admin");
   return (
     <>
-      {/* show navbar  only  if not admin page */}
-      {!isAdminpage && (
         <div className="sticky top-0 z-10 footer-gradient">
           <Navbar />
         </div>
-      )}
-      {!isAdminpage && (
+      
         <div className="fixed md:right-1/12 right-8 top-1/2 -translate-y-1/2 z-10">
           <Setting />
         </div>
-      )}
+      
 
       <Routes>
         <Route path="/" element={<App />} />
-        <Route
-          path="/admin"
-          element={
-            <Admin_route>
-              <Admin_dashboard />
-            </Admin_route>
-          }
-        />
+      
         <Route path="/about" element={<AboutSection />} />
         <Route path="/resume" element={<Resume_section />} />
         <Route path="/portfolio" element={<Portfolio_section />} />
@@ -74,11 +54,11 @@ const App_content = () => {
       </Routes>
       {/* show footer  only  if not admin page */}
 
-      {!isAdminpage && (
+    
         <div className="bg-gradient -mb-10">
           <Footer_section />
         </div>
-      )}
+      
       <Toaster />
     </>
   );
