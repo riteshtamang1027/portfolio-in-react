@@ -14,7 +14,6 @@ import Footer_section from "./components/footer_section.jsx";
 import { Theme_provider } from "./theme_provider.jsx";
 import Theme_toggle from "./components/theme_toggle.jsx";
 
-import Setting from "./components/setting.jsx";
 
 
 export default function Main() {
@@ -40,7 +39,7 @@ const App_content = () => {
         </div>
       
         <div className="fixed md:right-1/12 right-8 top-1/2 -translate-y-1/2 z-10">
-          <Setting />
+          <Theme_toggle/>
         </div>
       
 

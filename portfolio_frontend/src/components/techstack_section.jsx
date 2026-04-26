@@ -59,6 +59,7 @@ export default function Techstack_section() {
         <div className="flex flex-wrap gap-4">
           {skills.map((skill,index) => (
             <motion.span
+            key={index}
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: index * 0.08 }}
