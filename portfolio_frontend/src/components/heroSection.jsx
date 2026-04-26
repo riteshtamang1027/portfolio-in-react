@@ -8,7 +8,6 @@ import portfoloiImage from '../../public/images/img5.jpeg'
 
 export default function HeroSection() {
  
-
   return (
     <div className="text-[var(--text-primary)]">
       {/* main container */}
@@ -65,7 +64,7 @@ export default function HeroSection() {
                 I'm{" "}
                 <span className="text-[var(--text-secondary)] ">
                   <Typewriter
-                    words={[`MERN stack developer`, `Learning Next.Js`]}
+                    words={[`MERN Stack Developer`, `Learning Next.Js`]}
                     loop={Infinity}
                     cursor
                     cursorStyle="|"

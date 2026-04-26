@@ -21,14 +21,18 @@ import Message_popup from "./message_popup";
 export default function Footer_section() {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 80 }}
+       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1, delay: 0.5 }}
+      transition={{ duration: 0.8 }}
       className="footer-gradient text-[var(--text-primary)]/70 py-12 xl:px-64 lg:px-32 md:px-16 px-4 sm:px-32"
     >
       <div className="w-full justify-between  grid  lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 lg:gap-10 gap-x-24 sm:gap-y-16 gap-y-8">
         {/* Brand & Tagline */}
-        <div className="space-y-4">
+        <motion.div 
+         initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, delay: 0.1 }}
+        className="space-y-4">
           <p className="text-2xl font-bold text-[var(--text-secondary)] whitespace-nowrap">
             Ritesh Tamang
           </p>
@@ -45,10 +49,14 @@ export default function Footer_section() {
               Building clean, responsive, and interactive web apps.
             </p>
           </motion.div>
-        </div>
+        </motion.div>
 
         {/* Quick Links */}
-        <div className="space-y-4">
+        <motion.div
+         initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, delay: 0.2 }}
+        className="space-y-4">
           <p className="font-semibold text-[var(--text-hover)] uppercase tracking-wider text-sm">
             Quick Links
           </p>
@@ -73,10 +81,14 @@ export default function Footer_section() {
               </Link>
             ))}
           </div>
-        </div>
+        </motion.div>
 
         {/* Social Media */}
-        <div className="space-y-4">
+        <motion.div
+        initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, delay: 0.3 }}
+        className="space-y-4">
           <p className="font-semibold text-[var(--text-hover)] uppercase tracking-wider text-sm">
             Connect
           </p>
@@ -94,10 +106,14 @@ export default function Footer_section() {
               </Link>
             ))}
           </div>
-        </div>
+        </motion.div>
 
         {/* Contact / Newsletter */}
-        <div className="space-y-4">
+        <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, delay: 0.4 }}
+        className="space-y-4">
           <p className="font-semibold text-[var(--text-hover)] uppercase tracking-wider text-sm">
             Get in Touch
           </p>
@@ -106,7 +122,7 @@ export default function Footer_section() {
           </p>
 
           <Message_popup />
-        </div>
+        </motion.div>
       </div>
 
       {/* Bottom copyright */}

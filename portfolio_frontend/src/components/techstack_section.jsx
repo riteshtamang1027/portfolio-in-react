@@ -1,16 +1,26 @@
 import React from "react";
+
 import { motion } from "framer-motion";
+
+import { FaNodeJs } from "react-icons/fa";
+
 import {
   SiReact,
   SiNextdotjs,
   SiTailwindcss,
-  SiPostgresql,
-  SiCloudinary,
+  SiCloudinary,SiMongodb,
 } from "react-icons/si";
+
 import { TbDatabase } from "react-icons/tb";
 
 const skills = [
-  { i_name: "React", icon: SiReact },
+  { i_name: "React", 
+    icon: SiReact,
+  },
+   {
+    i_name: "JavaScript",
+    icon: FaNodeJs,
+  },
   {
     i_name: "Next.js",
     icon: SiNextdotjs,
@@ -20,12 +30,8 @@ const skills = [
     icon: SiTailwindcss,
   },
   {
-    i_name: "PostgreSQL",
-    icon: SiPostgresql,
-  },
-  {
-    i_name: "Drizzle ORM",
-    icon: TbDatabase,
+    i_name: "MongoDB",
+    icon: SiMongodb,
   },
   {
     i_name: "Cloudinary",
@@ -36,20 +42,24 @@ const skills = [
 export default function Techstack_section() {
   return (
     <div>
+
       {/* Tech Stack Section */}
+
       <motion.div
-          initial={{ opacity: 0, y: 40 }}
+      initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, delay: 0.3 }}
         className="space-y-8"
       >
+
         <p className="text-3xl font-bold max-sm:text-2xl text-[var(--text-secondary)]">
           Tech Stack:
         </p>
+
         <div className="flex flex-wrap gap-4">
           {skills.map((skill,index) => (
             <motion.span
-                  initial={{ opacity: 0, scale: 0.8 }}
+              initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: index * 0.08 }}
               whileHover={{ scale: 1.1 }}

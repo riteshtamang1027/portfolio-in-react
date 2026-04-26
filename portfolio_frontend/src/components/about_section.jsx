@@ -1,4 +1,3 @@
-"use client";
 import { motion } from "framer-motion";
 import img2 from '../../public/images/img2.jpg'
 
@@ -7,13 +6,16 @@ export default function About_section() {
     <div className="text-[var(--text-primary)]/90 space-y-8">
       <p className="text-3xl md:text-4xl font-bold text-[var(--text-secondary)] text-center">About Me</p>
       <div className="flex flex-col md:flex-row items-center md:gap-24 gap-8">
+        
         {/* LEFT SECTION - IMAGE */}
+
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
           className="md:w-1/3"
         >
+
           <img
             src={img2}
             alt="About Me"
