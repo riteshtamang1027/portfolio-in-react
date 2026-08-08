@@ -24,6 +24,8 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
+  --color-navbar-backgroun: var(--navbar-backgroun);
+  --color-accent-icon: var(--accent-icon);
 }
 
 :root {

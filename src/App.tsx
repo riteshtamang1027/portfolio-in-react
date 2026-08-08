@@ -1,7 +1,9 @@
+import Navbar from "./components/layout/navbar";
+
 function App(){
   return(
     <>
-    <div className="bg-blue-500 text-white p-4">Hello World!</div>
+   <Navbar/>
     
     </>
   )
