@@ -1,36 +1,100 @@
-import { CodeXml } from "lucide-react";
-import { NavLink } from "react-router";
+import { CodeXml, Sun } from "lucide-react";
+import { useEffect, useState } from "react";
+import { LuGithub, LuLinkedin } from "react-icons/lu";
 
 export default function Navbar() {
+  const header_offser = 72;
+
+  function scrollId({ id }: any) {
+    const { el }: any = document.getElementById(id);
+    if (!el) {
+      const top =
+        el.getBoundingClientRect().top + window.scrollY - header_offser;
+      window.scrollTo({ top, behavior: "smooth" });
+    }
+  }
+
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 12);
+    window.addEventListener("scroll", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+    };
+  }, []);
+
   return (
-    <nav className="flex flex-1 px-40 py-2 bg-navbar-backgroun/80 min-w-full border-b border-border justify-between">
-        {/* logo */}
-        <div className="flex items-center">
-            <CodeXml className="text-accent-icon" strokeWidth={2.8} size={32}/> <span className="font-semibold text-2xl text-primary">RL</span>
-        </div>
+    <header className="flex flex-1 px-40 py-2 bg-navbar-backgroun/80 min-w-full border-b border-border justify-between">
+      {/* logo */}
+      <div className="flex items-center">
+        <CodeXml className="text-accent-icon" strokeWidth={2.8} size={32} />{" "}
+        <span className="font-semibold text-2xl text-primary">RL</span>
+      </div>
 
-        {/* links */}
-        <div className="flex items-center space-x-8">
-        <NavLink to={""}>
+      {/* links */}
+      <nav className="flex items-center space-x-8">
+        {navLinks.map((link) =>
+          link.type === scroll ? (
+            <a
+              key={link.label}
+              href={`#${link.id}`}
+              onClick={(e) => {
+                e.preventDefault();
+                scrollId(link.id);
+              }}
+              className="text-sm font-semibold"
+            >
+              {link.label}
+            </a>
+          ) : (
+            <a key={link.label} href={link.id} className="text-sm font-medium">
+              {link.label}
+            </a>
+          ),
+        )}
+      </nav>
 
-            <span>About</span>
-        </NavLink>
-            <span>Projects</span>
-            <span>Skills</span>
-            <span>Experiences</span>
-            <span>Blog</span>
-            <span>Contact</span>
-           
-        </div>
+      {/* right side nav */}
 
-        {/* right side nav */}
-
-        <div>
-            right side nav
-        </div>
-
-
-      
-    </nav>
-  )
+      <div className="flex items-center space-x-8">
+        <Sun strokeWidth={1.5} size={16} />
+        <LuGithub size={16}/>
+        <LuLinkedin size={16}/>
+      </div>
+    </header>
+  );
 }
+
+const navLinks = [
+  {
+    label: "About",
+    id: "about",
+    type: scroll,
+  },
+  {
+    label: "Projects",
+    id: "projects",
+    type: scroll,
+  },
+  {
+    label: "Skills",
+    id: "skills",
+    type: scroll,
+  },
+  {
+    label: "Experiences",
+    id: "experiences",
+    type: scroll,
+  },
+  {
+    label: "Blog",
+    id: "blog",
+    type: scroll,
+  },
+  {
+    label: "Contact",
+    id: "contact",
+    type: scroll,
+  },
+];
