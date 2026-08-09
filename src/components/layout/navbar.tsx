@@ -25,11 +25,11 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className="flex flex-1 px-40 py-2 bg-navbar-backgroun/80 min-w-full border-b border-border justify-between">
+    <header className="flex flex-1 px-36 py-4 bg-backgroun/70 backdrop-blur-lg min-w-full border-b border-border justify-between">
       {/* logo */}
-      <div className="flex items-center">
-        <CodeXml className="text-accent-icon" strokeWidth={2.8} size={32} />{" "}
-        <span className="font-semibold text-2xl text-primary">RL</span>
+      <div className="flex items-center space-x-2">
+        <CodeXml className="text-accent-icon" strokeWidth={2.8} size={28} />{" "}
+        <span className="font-semibold text-xl text-primary">RL</span>
       </div>
 
       {/* links */}
