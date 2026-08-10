@@ -31,6 +31,8 @@
   --color-surface-muted: var(--surface-muted);
   --color-brand: var(--brand);
   --color-brand-foreground: var(--brand-foreground);
+  --color-secondary-text:var(--secondary-text);
+  --color-subtle:var(--subtle);
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
 }
@@ -39,7 +41,7 @@
 /* Primary buttons, logo badge, links, active states, timeline dots */
   --brand: oklch(0.4318 0.0865 166.91);
   /* Category labels, company names, "View All" links */
-  --secondary-text: oklch(0.596 0.1274 163.23);
+  --secondary-text: oklch(54.023% 0.1153 163.043);
   --border: oklch(0.4318 0.0865 166.91);
   --accent-icon: oklch(0.5081 0.1049 165.61);
   --accent-hover: oklch(0.378 0.073 168.94);
@@ -73,7 +75,7 @@
 
 .dark {
 /* Primary buttons, logo badge, links, active states, timeline dots */
-  --accent: oklch(0.4318 0.0865 166.91);
+  --brand: oklch(0.4318 0.0865 166.91);
   /* Category labels, company names, "View All" links */
   --secondary-text: oklch(0.596 0.1274 163.23);
   --border: oklch(0.4318 0.0865 166.91);

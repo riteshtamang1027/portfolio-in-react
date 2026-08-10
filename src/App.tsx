@@ -1,11 +1,12 @@
 import Footer from "./components/layout/footer";
-import Navbar from "./components/layout/navbar";
+import Hero from "./sections/hero";
 
 function App(){
   return(
     <div className="flex flex-col">
-   <Navbar/>
-   <div className="flex-1 min-h-screen"></div>
+   <div className="flex-1 min-h-screen">
+    <Hero/>
+   </div>
     <Footer/>
     </div>
   )
