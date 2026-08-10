@@ -29,7 +29,7 @@ export default function Navbar() {
       {/* logo */}
       <div className="flex items-center space-x-2">
         <CodeXml className="text-accent-icon" strokeWidth={2.8} size={28} />{" "}
-        <span className="font-semibold text-xl text-primary">RL</span>
+        <span className="font-semibold text-xl text-foreground">RL</span>
       </div>
 
       {/* links */}
@@ -43,12 +43,12 @@ export default function Navbar() {
                 e.preventDefault();
                 scrollId(link.id);
               }}
-              className="text-sm font-semibold"
+              className="text-sm font-semibold text-muted-foreground"
             >
               {link.label}
             </a>
           ) : (
-            <a key={link.label} href={link.id} className="text-sm font-medium">
+            <a key={link.label} href={link.id} className="text-sm font-medium text-muted-foreground">
               {link.label}
             </a>
           ),
@@ -58,9 +58,9 @@ export default function Navbar() {
       {/* right side nav */}
 
       <div className="flex items-center space-x-8">
-        <Sun strokeWidth={1.5} size={16} />
-        <LuGithub size={16}/>
-        <LuLinkedin size={16}/>
+        <Sun strokeWidth={1.5} size={16} className="text-muted-foreground" />
+        <LuGithub size={16} className="text-muted-foreground"/>
+        <LuLinkedin size={16} className="text-muted-foreground"/>
       </div>
     </header>
   );
