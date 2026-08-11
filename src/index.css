@@ -42,7 +42,7 @@
   --brand: oklch(0.4318 0.0865 166.91);
   /* Category labels, company names, "View All" links */
   --secondary-text: oklch(54.023% 0.1153 163.043);
-  --border: oklch(0.4318 0.0865 166.91);
+  --border: oklch(0.92 0.008 250);;
   --accent-icon: oklch(0.5081 0.1049 165.61);
   --accent-hover: oklch(0.378 0.073 168.94);
   /* Badge backgrounds */
@@ -78,11 +78,11 @@
   --brand: oklch(0.4318 0.0865 166.91);
   /* Category labels, company names, "View All" links */
   --secondary-text: oklch(0.596 0.1274 163.23);
-  --border: oklch(0.4318 0.0865 166.91);
-  --accent-icon: oklch(0.5081 0.1049 165.61);
+  --border: oklch(0.92 0.008 250);;
+  --accent-icon: oklch(69.725% 0.13688 167.362);
   --accent-hover: oklch(0.378 0.073 168.94);
   /* Badge backgrounds */
-  --subtle: oklch(0.378 0.073 168.94);
+  --subtle: oklch(41.142% 0.07753 169.781);
   --muted-points: oklch(0.5081 0.1049 165.61);
   --ring:  oklch(0.5081 0.1049 165.61);
 
