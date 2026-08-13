@@ -1,4 +1,5 @@
 import Footer from "./components/layout/footer";
+import FeaturedProjects from "./sections/featuredProjects";
 import Hero from "./sections/hero";
 import TrustIndicators from "./sections/trustIndicators";
 
@@ -8,6 +9,7 @@ function App(){
    <div className="flex-1 min-h-screen">
     <Hero/>
     <TrustIndicators/>
+    <FeaturedProjects/>
    </div>
     <Footer/>
     </div>
