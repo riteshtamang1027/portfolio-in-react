@@ -45,20 +45,18 @@ export default function Hero() {
             <span>Download resume</span>
           </button>
         </div>
-
-        
       </section>
       {/* skills */}
-        <div className="flex space-x-4 mt-4">
-          {skills.map((skill) => (
-            <div
-              key={skill}
-              className="border border-ring rounded-full px-4 py-1 text-xs bg-background text-muted-foreground "
-            >
-              {skill}
-            </div>
-          ))}
-        </div>
+      <div className="flex space-x-4 mt-4">
+        {skills.map((skill) => (
+          <div
+            key={skill}
+            className="border border-ring rounded-full px-4 py-1 text-xs bg-background text-muted-foreground "
+          >
+            {skill}
+          </div>
+        ))}
+      </div>
     </main>
   );
 }
