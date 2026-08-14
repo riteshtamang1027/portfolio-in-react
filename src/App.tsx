@@ -1,4 +1,5 @@
 import Footer from "./components/layout/footer";
+import ExperienceTimeline from "./sections/experienceTimeline";
 import FeaturedProjects from "./sections/featuredProjects";
 import Hero from "./sections/hero";
 import Skills from "./sections/skills";
@@ -12,6 +13,7 @@ function App(){
     <TrustIndicators/>
     <FeaturedProjects/>
     <Skills/>
+    <ExperienceTimeline/>
    </div>
     <Footer/>
     </div>

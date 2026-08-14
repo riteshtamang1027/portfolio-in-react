@@ -33,6 +33,7 @@
   --color-brand-foreground: var(--brand-foreground);
   --color-secondary-text:var(--secondary-text);
   --color-subtle:var(--subtle);
+  --color-muted-points: var(--muted-points);
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
 }
