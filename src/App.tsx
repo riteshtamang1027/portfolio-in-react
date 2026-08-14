@@ -1,6 +1,7 @@
 import Footer from "./components/layout/footer";
 import FeaturedProjects from "./sections/featuredProjects";
 import Hero from "./sections/hero";
+import Skills from "./sections/skills";
 import TrustIndicators from "./sections/trustIndicators";
 
 function App(){
@@ -10,6 +11,7 @@ function App(){
     <Hero/>
     <TrustIndicators/>
     <FeaturedProjects/>
+    <Skills/>
    </div>
     <Footer/>
     </div>

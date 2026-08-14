@@ -3,7 +3,7 @@ import { LuGithub } from "react-icons/lu";
 
 export default function FeaturedProjects() {
   return (
-    <main className="px-38 mt-8 space-y-8">
+    <main className="px-38 mt-8 space-y-8 bg-backgroud">
       <section className="space-y-4">
         <p className="text-secondary-text text-xs tracking-widest">
           FEATURED WORK
