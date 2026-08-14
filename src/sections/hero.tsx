@@ -2,7 +2,7 @@ import { ArrowRight, Circle, Dot, Download } from "lucide-react";
 
 export default function Hero() {
   return (
-    <main className="flex flex-col items-center justify-center bg-background border-b py-8 px-120  text-center space-y-8">
+    <main className="flex flex-col items-center justify-center bg-background border-b py-8 px-120  text-center space-y-4">
       <div className="flex items-center space-x-2 border border-ring rounded-full px-2 py-0.5 w-max text-xs text-secondary-text bg-subtle/30 tracking-wide mt-4">
         {" "}
         <Circle
@@ -13,14 +13,14 @@ export default function Hero() {
         <span>Available for new opportunities</span>
       </div>
       {/* hero */}
-      <section className="space-y-6 mt-4">
+      <section className="space-y-4 mt-4">
         <p className="text-lg tracking-tight font-semibold text-muted-foreground">
           HELLO, I'M
         </p>
-        <h1 className="text-6xl font-bold tracking-tight leading-1.2 text-foreground/80">
+        <h1 className="text-6xl font-bold tracking-tight text-foreground/80">
           Ritesh Lama
         </h1>
-        <h2 className="text-2xl font-bold tracking-tight leading-1.2 text-muted-foreground">
+        <h2 className="text-2xl font-bold tracking-tight text-muted-foreground">
           Full Stack Developer & Software Engineer
         </h2>
         <div className="flex space-x-1 items-center justify-center">
