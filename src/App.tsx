@@ -4,6 +4,7 @@ import ExperienceTimeline from "./sections/experienceTimeline";
 import FeaturedProjects from "./sections/featuredProjects";
 import Hero from "./sections/hero";
 import Skills from "./sections/skills";
+import Testimonials from "./sections/testimonials";
 import TrustIndicators from "./sections/trustIndicators";
 
 function App(){
@@ -16,6 +17,7 @@ function App(){
     <Skills/>
     <ExperienceTimeline/>
     <BlogHighlights/>
+    <Testimonials/>
    </div>
     <Footer/>
     </div>

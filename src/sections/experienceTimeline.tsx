@@ -1,7 +1,6 @@
 export default function ExperienceTimeline() {
   return (
-    <main className="px-38 py-8 mt-8 space-y-16 border-b">
-      
+    <main className="px-38 py-8 space-y-16 border-b bg-background">
       <section className="space-y-4">
         <p className="text-secondary-text text-xs tracking-widest">CAREER</p>
         <h2 className="text-4xl font-bold text-foreground/80 tracking-tight">
@@ -14,10 +13,12 @@ export default function ExperienceTimeline() {
 
       {/* experience timeline */}
 
-      
-      <section  className="flex flex-col px-42 gap-8">
+      <section className="flex flex-col px-42 gap-8">
         {experienceLine.map((item, i) => (
-          <div key={i} className="relative flex flex-col gap-4 border-l px-8 pt-4">
+          <div
+            key={i}
+            className="relative flex flex-col gap-4 border-l px-8 pt-4"
+          >
             <div className="absolute w-2 h-2 rounded-full bg-muted-points  ring-4 ring-ring/20 -left-1.5 transform  -top-1.5"></div>
             <p className="absolute -top-3 text-xs text-secondary-text font-medium">
               {item.year}
@@ -31,8 +32,7 @@ export default function ExperienceTimeline() {
 
             <p className="text-muted-foreground">{item.description}</p>
           </div>
-      ))}
-     
+        ))}
       </section>
     </main>
   );
