@@ -2,7 +2,7 @@ import { MoveRight } from "lucide-react";
 
 export default function BlogHighlights() {
   return (
-    <main className="px-38 py-8 mt-8 space-y-16 border-b bg-surface">
+    <main className="px-38 py-8 space-y-16 border-b bg-surface">
       <section className="space-y-4">
         <p className="text-secondary-text text-xs tracking-widest">WRITING</p>
         <h2 className="text-4xl font-bold text-foreground/80 tracking-tight">
@@ -17,14 +17,14 @@ export default function BlogHighlights() {
 
      <div className="flex items-center justify-between gap-8">
          {blog.map((item, i) => (
-        <section className="border rounded-xl w-1/3 bg-card cursor-pointer">
+        <section className="border rounded-xl w-1/3 bg-card cursor-pointer group ease-linear">
           <div key={i} className="h-64 overflow-hidden rounded-t-xl">
-            <img className="h-64 w-full object-cover" src={item.image} alt="Image" />
+            <img className="h-64 w-full object-cover group-hover:scale-105 duration-300" src={item.image} alt="Image" />
           </div>
           <div className="px-4 py-8 flex flex-col gap-y-4">
             <div className="flex gap-x-4">
               <span
-                className="bg-surface-muted rounded-full px-2 py-0.5
+                className="bg-surface rounded-full px-2 py-0.5
                 text-xs font-semibold text-foreground/80"
               >
                 {item.type}
@@ -33,12 +33,12 @@ export default function BlogHighlights() {
                 {item.time}
               </span>
             </div>
-            <p className="text-lg font-semibold text-foreground/80">
+            <p className="text-lg font-semibold text-foreground/80 group-hover:text-secondary-text">
               {item.title}
             </p>
-            <div className="flex items-center gap-x-4">
+            <div className="flex opacity-0 items-center gap-x-1 group-hover:opacity-100 duration-300 group-hover:text-secondary-text text-muted-foreground">
               <span>Read aritcle</span>
-              <MoveRight size={16} />
+              <MoveRight size={16} className="text-muted-foreground group-hover:text-secondary-text"/>
             </div>
           </div>
         </section>
