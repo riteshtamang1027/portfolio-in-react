@@ -1,4 +1,5 @@
 import Footer from "./components/layout/footer";
+import BlogHighlights from "./sections/blogHighlights";
 import ExperienceTimeline from "./sections/experienceTimeline";
 import FeaturedProjects from "./sections/featuredProjects";
 import Hero from "./sections/hero";
@@ -14,6 +15,7 @@ function App(){
     <FeaturedProjects/>
     <Skills/>
     <ExperienceTimeline/>
+    <BlogHighlights/>
    </div>
     <Footer/>
     </div>

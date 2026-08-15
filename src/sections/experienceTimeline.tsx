@@ -1,8 +1,9 @@
 export default function ExperienceTimeline() {
   return (
-    <main className="px-38 py-8 mt-8 space-y-8 border-b">
+    <main className="px-38 py-8 mt-8 space-y-16 border-b">
+      
       <section className="space-y-4">
-        <p className="text-secondary-text text-xs tracking-widest">Career</p>
+        <p className="text-secondary-text text-xs tracking-widest">CAREER</p>
         <h2 className="text-4xl font-bold text-foreground/80 tracking-tight">
           Experience
         </h2>
