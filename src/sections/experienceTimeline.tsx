@@ -12,20 +12,51 @@ export default function ExperienceTimeline() {
       </section>
 
       {/* experience timeline */}
-      <section>
-        <div className="relative flex flex-col gap-4 border-l px-8">
-            <div className="absolute w-2.5 h-2.5 rounded-full bg-muted-points  ring-4 ring-ring/20 -left-1.5 transform  -top-1.5"></div>
-            <p>
-                2023 — Present
-            </p>
-           <div>
-             <h4>Senior Full Stack Engineer</h4>
-            <p>Linear-scale SaaS · Remote</p>
-           </div>
 
-            <p>Lead the platform team building a multi-tenant analytics product. Drove a migration to edge-rendered React, cutting p75 TTFB by 62%.</p>
-        </div>
+      
+      <section  className="flex flex-col px-42 gap-8">
+        {experienceLine.map((item, i) => (
+          <div key={i} className="relative flex flex-col gap-4 border-l px-8 pt-4">
+            <div className="absolute w-2 h-2 rounded-full bg-muted-points  ring-4 ring-ring/20 -left-1.5 transform  -top-1.5"></div>
+            <p className="absolute -top-3 text-xs text-secondary-text font-medium">
+              {item.year}
+            </p>
+            <div className="space-y-1">
+              <h4 className="text-foreground/80 font-semibold text-xl">
+                {item.role}
+              </h4>
+              <p className="text-muted-foreground text-sm">{item.type}</p>
+            </div>
+
+            <p className="text-muted-foreground">{item.description}</p>
+          </div>
+      ))}
+     
       </section>
     </main>
   );
 }
+
+const experienceLine = [
+  {
+    year: "2023 — Present",
+    role: "Senior Full Stack Engineer",
+    type: "Linear-scale SaaS · Remote",
+    description:
+      "Lead the platform team building a multi-tenant analytics product. Drove a migration to edge-rendered React, cutting p75 TTFB by 62%.",
+  },
+  {
+    year: "2021 — 2023",
+    role: "Full Stack Engineer",
+    type: "Northwind Labs · New York",
+    description:
+      "Owned the checkout and payments domain end-to-end. Shipped 14 production services and mentored 4 engineers.",
+  },
+  {
+    year: "2019 — 2021",
+    role: "Software Engineer",
+    type: "Helio Studio · Berlin",
+    description:
+      "Built bespoke web platforms for fintech and healthtech clients. Established the studio's TypeScript design system.",
+  },
+];
