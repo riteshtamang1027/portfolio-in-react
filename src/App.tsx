@@ -12,15 +12,14 @@ function App() {
   return (
     <div className="flex flex-col">
       <div className="flex-1 min-h-screen">
-        <Hero/>
-    <TrustIndicators/>
-    <FeaturedProjects/>
-    <Skills/>
-    <ExperienceTimeline/>
-    <BlogHighlights/>
-    <Testimonials/>
-    <ContactCTA/>
-       
+        <Hero />
+        <TrustIndicators />
+        <FeaturedProjects />
+        <Skills />
+        <ExperienceTimeline />
+        <BlogHighlights />
+        <Testimonials />
+        <ContactCTA />
       </div>
       <Footer />
     </div>

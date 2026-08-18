@@ -1,3 +1,6 @@
+import { Calendar, Mail } from "lucide-react";
+import Button from "../components/ui/button";
+
 export default function ContactCTA() {
   return (
     <main className="px-38 py-20 space-y-16 bg-background">
@@ -12,12 +15,24 @@ export default function ContactCTA() {
           </p>
         </div>
         <div className="w-1/3 flex flex-col items-end justify-end gap-4 ">
-          <button className="border bg-card w-max rounded-lg px-5 py-3 font-semibold text-sm">
-            Contact me
-          </button>
-          <button className="border border-border text-secondary w-max rounded-lg px-5 py-3 font-semibold text-sm">
-            Schedule a meeting
-          </button>
+
+        {/* contact button */}
+          <Button
+            icon={<Mail size={15} className="text-foreground/90" />}
+            className="border bg-card w-max rounded-lg px-5 py-3 font-semibold text-sm flex items-center text-foreground/90 gap-2 cursor-pointer"
+          >
+            Contact me{" "}
+          </Button>
+
+        
+{/* Scheduling button */}
+          <Button
+            icon={<Calendar size={15} className="text-secondary/90" />}
+            className="border border-border text-secondary/90 w-max rounded-lg px-5 py-3 font-semibold text-sm flex items-center gap-2 cursor-pointer"
+          >
+            {" "}
+            Schedule a meeting{" "}
+          </Button>
         </div>
       </div>
     </main>
