@@ -8,11 +8,11 @@ import Skills from "./sections/skills";
 import Testimonials from "./sections/testimonials";
 import TrustIndicators from "./sections/trustIndicators";
 
-function App(){
-  return(
+function App() {
+  return (
     <div className="flex flex-col">
-   <div className="flex-1 min-h-screen">
-    <Hero/>
+      <div className="flex-1 min-h-screen">
+        <Hero/>
     <TrustIndicators/>
     <FeaturedProjects/>
     <Skills/>
@@ -20,10 +20,11 @@ function App(){
     <BlogHighlights/>
     <Testimonials/>
     <ContactCTA/>
-   </div>
-    <Footer/>
+       
+      </div>
+      <Footer />
     </div>
-  )
+  );
 }
 
 export default App;

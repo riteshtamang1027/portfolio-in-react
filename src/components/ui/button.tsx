@@ -1,14 +1,14 @@
-import type { IconContext } from "react-icons"
+import type { ButtonHTMLAttributes, ReactNode } from "react"
 
+type buttonProps = ButtonHTMLAttributes <HTMLButtonElement> &{
+  icon ?:ReactNode;
+}
 
-export default function Button() {
-    interface button{
-        className: String,
-        icon:IconContext;
-    }
+export default function button({children, icon, className = "", ...props}:buttonProps) {
   return (
-    <div className="px-4 py-2 rounded-lg border border-border ">
-      
-    </div>
+    <button {...props} className={className}>
+      {icon}
+      {children}
+    </button>
   )
 }
