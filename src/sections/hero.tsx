@@ -1,15 +1,15 @@
 import { ArrowRight, Circle, Dot, Download } from "lucide-react";
+import Button from "../components/ui/button";
 
 export default function Hero() {
   return (
     <main className="flex flex-col items-center justify-center bg-background border-b py-8 px-120  text-center space-y-4">
-      <div className="flex items-center space-x-2 border border-ring rounded-full px-2 py-0.5 w-max text-xs text-secondary-text bg-subtle/30 tracking-wide mt-4">
+      <div className="flex items-center space-x-2 border  rounded-full px-2 py-0.5 w-max text-xs text-secondary-text bg-subtle/16 tracking-wide mt-4">
         {" "}
-        <Circle
-          size={8}
-          strokeWidth={1.5}
-          className="fill-accent-icon animate-pulse"
-        />{" "}
+        <div className="relative flex items-center justify-center">
+          <Circle size={8} strokeWidth={1.5} className="fill-accent-icon" />
+          <span className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 size-1 rounded-full ring-3 ring-ring/40 animate-ping" />
+        </div>{" "}
         <span>Available for new opportunities</span>
       </div>
       {/* hero */}
@@ -23,9 +23,10 @@ export default function Hero() {
         <h2 className="text-2xl font-bold tracking-tight text-muted-foreground">
           Full Stack Developer & Software Engineer
         </h2>
-        <div className="flex space-x-1 items-center justify-center">
+        <div className="flex space-x-2 items-center justify-center">
           <span className="border-b border-border w-16"></span>
-          <Dot size={34} className="text-accent-icon" />
+        
+          <div className="w-2 h-2 bg-accent-icon rounded-full"></div>
           <span className="border-b border-border w-16"></span>
         </div>
         {/* about  */}
@@ -37,13 +38,19 @@ export default function Hero() {
 
         {/* button */}
         <div className="flex items-center space-x-4 justify-center mt-8">
-          <button className="px-4 py-2 text-sm font-semibold cursor-pointer border rounded-md flex items-center space-x-2 bg-foreground text-background hover:bg-primary/80 transform duration-300">
-            <span>View projects</span> <ArrowRight size={18} />
-          </button>
-          <button className="px-4 py-2 text-sm font-semibold cursor-pointer border rounded-md flex items-center space-x-2 bg-background text-foreground hover:bg-primary-foreground/80 transform duration-300">
-            <Download size={18} />
-            <span>Download resume</span>
-          </button>
+          <Button
+            icon={<ArrowRight size={18} />}
+            className="px-4 py-2 text-sm font-semibold cursor-pointer border rounded-md flex items-center flex-row-reverse gap-2 bg-foreground text-background hover:bg-primary/80 transform duration-300"
+          >
+            View projects
+          </Button>
+
+          <Button
+            icon={<Download size={18} />}
+            className="px-4 py-2 text-sm font-semibold cursor-pointer border rounded-md flex items-center gap-2 bg-background text-foreground hover:bg-primary-foreground/80 transform duration-300"
+          >
+            Download resume
+          </Button>
         </div>
       </section>
       {/* skills */}
