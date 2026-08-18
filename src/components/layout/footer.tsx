@@ -3,7 +3,7 @@ import { LuGithub, LuLinkedin } from "react-icons/lu";
 
 export default function Footer() {
   return (
-    <footer className="px-36 bg-surface mt-8 py-4 border-t">
+    <footer className="px-36 bg-background border-t flex flex-col gap-16 pt-12">
       {/* upper footer */}
       <section className="flex items-center justify-between">
         {/* logo */}
@@ -14,26 +14,29 @@ export default function Footer() {
               Ritesh Lama
             </span>
           </div>
-          <p className="text-xs">
+          <p className="text-sm text-muted-foreground">
             Crafting digital experiences with precision.
           </p>
         </div>
-        <ul className="flex space-x-8 font-semibold">
+
+        {/* shortcut links */}
+        <ul className="flex space-x-8 font-semibold text-muted-foreground text-base">
           <li>About</li>
           <li>Projects</li>
           <li>Blog</li>
           <li>Contact</li>
         </ul>
-        <div className="flex space-x-4">
+
+        {/* connection links */}
+        <div className="flex space-x-8">
           <LuGithub size={16} className="text-muted-foreground" />
           <LuLinkedin size={16} className="text-muted-foreground" />
-           <Mail size={16} className="text-muted-foreground"/>
+          <Mail size={16} className="text-muted-foreground" />
         </div>
       </section>
 
       {/* lower footer */}
-      <section className="flex items-center justify-between text-xs mt-16">
-
+      <section className="flex items-center justify-between text-xs text-muted-foreground">
         <p>© 2026 John Doe. All rights reserved.</p>
         <p>Built with React & Tailwind</p>
       </section>

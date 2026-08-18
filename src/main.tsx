@@ -4,6 +4,7 @@ import './index.css'
 import App from './App.tsx'
 import { BrowserRouter, Routes, Route } from "react-router";
 import Navbar from './components/layout/navbar.tsx';
+import Footer from './components/layout/footer.tsx';
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>
@@ -13,6 +14,7 @@ createRoot(document.getElementById('root')!).render(
      <Routes>
       <Route path="/" element={<App />} />
     </Routes>
+    <Footer />
   </BrowserRouter>,
   </StrictMode>,
 )
