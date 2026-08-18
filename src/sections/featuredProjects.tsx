@@ -3,12 +3,12 @@ import { LuGithub } from "react-icons/lu";
 
 export default function FeaturedProjects() {
   return (
-    <main className="px-38 mt-8 space-y-8 bg-backgroud">
+    <main className="px-38 mt-16 space-y-12 bg-backgroud">
       <section className="space-y-4">
         <p className="text-secondary-text text-xs tracking-widest">
           FEATURED WORK
         </p>
-        <h2 className="text-4xl font-bold text-foreground/80 tracking-tight">
+        <h2 className="text-4xl font-bold text-foreground/80 tracking-wide">
           Selected projects
         </h2>
         <p className="text-muted-foreground tracking-wide">
@@ -17,7 +17,8 @@ export default function FeaturedProjects() {
         </p>
       </section>
 
-      {project.map((item, index) => (
+      <div className="flex flex-col justify-center gap-8">
+        {project.map((item, index) => (
         <section
           key={index}
           className={`flex items-center justify-between gap-8 border border-border rounded-xl p-8 w-full ${index % 2 !== 0 ? "flex-row-reverse" : ""} `}
@@ -74,6 +75,7 @@ export default function FeaturedProjects() {
           </div>
         </section>
       ))}
+      </div>
     </main>
   );
 }

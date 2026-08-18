@@ -20,7 +20,7 @@ export default function Footer() {
         </div>
 
         {/* shortcut links */}
-        <ul className="flex space-x-8 font-semibold text-muted-foreground text-base">
+        <ul className="flex items-center justify-between space-x-8 font-semibold text-muted-foreground text-base">
           <li>About</li>
           <li>Projects</li>
           <li>Blog</li>

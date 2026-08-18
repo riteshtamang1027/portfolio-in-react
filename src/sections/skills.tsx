@@ -2,10 +2,10 @@ import { Cloud, CodeXml, Database, Server,Infinity, Terminal  } from "lucide-rea
 
 export default function Skills() {
   return (
-    <main className="bg-surface px-38 py-8 mt-8 space-y-8 border-x border">
+    <main className="bg-surface px-38 mt-16 py-16 space-y-12 border-x border">
       <section className="space-y-4">
         <p className="text-secondary-text text-xs tracking-widest">Toolkit</p>
-        <h2 className="text-4xl font-bold text-foreground/80 tracking-tight">
+        <h2 className="text-4xl font-bold text-foreground/80 tracking-wide">
           Skills & technologies
         </h2>
         <p className="text-muted-foreground tracking-wide">

@@ -1,6 +1,6 @@
 export default function TrustIndicators() {
   return (
-    <section className="flex items-center justify-between space-x-8 px-38 border-b border-border bg-background">
+    <section className="flex items-center justify-between mt-8  space-x-12 px-38 border border-border bg-background">
       {trustIndicators.map((item, index) => (
         <div key={index} className="flex flex-col justify-center space-y-1 py-8">
           <span className="text-3xl font-semibold text-foreground">{item.number}</span>

@@ -1,11 +1,11 @@
 export default function Testimonials() {
   return (
-    <main className="px-38 py-8 space-y-16 border-b">
+    <main className="px-38 py-16 space-y-12 border-b">
       <section className="space-y-4">
         <p className="text-secondary-text text-xs tracking-widest">
           TESTIMONIALS
         </p>
-        <h2 className="text-4xl font-bold text-foreground/80 tracking-tight">
+        <h2 className="text-4xl font-bold text-foreground/80 tracking-wide">
           What collaborators say
         </h2>
         <p className="text-muted-foreground tracking-wide">
