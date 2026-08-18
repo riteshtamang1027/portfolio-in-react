@@ -1,5 +1,5 @@
 import { CodeXml, Sun } from "lucide-react";
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import { LuGithub, LuLinkedin } from "react-icons/lu";
 
 export default function Navbar() {
@@ -14,15 +14,15 @@ export default function Navbar() {
     }
   }
 
-  const [scrolled, setScrolled] = useState(false);
+  // const [scrolled, setScrolled] = useState(false);
 
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 12);
-    window.addEventListener("scroll", onScroll);
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-    };
-  }, []);
+  // useEffect(() => {
+  //   const onScroll = () => setScrolled(window.scrollY > 12);
+  //   window.addEventListener("scroll", onScroll);
+  //   return () => {
+  //     window.removeEventListener("scroll", onScroll);
+  //   };
+  // }, []);
 
   return (
     <header className="flex flex-1 px-36 py-4 bg-backgroun/70 backdrop-blur-lg min-w-full border-b border-border justify-between">

@@ -1,4 +1,4 @@
-import { ArrowRight, Circle, Dot, Download } from "lucide-react";
+import { ArrowRight, Circle, Download } from "lucide-react";
 import Button from "../components/ui/button";
 
 export default function Hero() {
