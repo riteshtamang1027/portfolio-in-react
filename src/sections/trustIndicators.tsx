@@ -1,7 +1,7 @@
 export default function TrustIndicators() {
   return (
     <section className=" mt-8 px-8 sm:px-12 md:px-16 lg:px-24 xl:px-36 border border-border bg-background w-full">
-      <div className="grid md:grid-cols-4 grid-cols-2 items-center justify-center w-full md:gap-8">
+      <div className="grid md:grid-cols-4 grid-cols-2 items-center justify-center w-full gap-x-8 md:gap-8">
         {trustIndicators.map((item, index) => (
           <div
             key={index}

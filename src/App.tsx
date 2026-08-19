@@ -13,12 +13,12 @@ function App() {
       
        <Hero />
       <TrustIndicators />
-      {/* <FeaturedProjects />
+      <FeaturedProjects />
       <Skills />
       <ExperienceTimeline />
       <BlogHighlights />
       <Testimonials />
-      <ContactCTA /> */}
+      <ContactCTA />
     </div>
   );
 }
