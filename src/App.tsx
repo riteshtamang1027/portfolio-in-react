@@ -10,14 +10,15 @@ import TrustIndicators from "./sections/trustIndicators";
 function App() {
   return (
     <div className="flex-1 min-h-screen">
-      <Hero />
-      <TrustIndicators />
+      
+       <Hero />
+      {/* <TrustIndicators />
       <FeaturedProjects />
       <Skills />
       <ExperienceTimeline />
       <BlogHighlights />
       <Testimonials />
-      <ContactCTA />
+      <ContactCTA /> */}
     </div>
   );
 }
