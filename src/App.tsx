@@ -12,8 +12,8 @@ function App() {
     <div className="flex-1 min-h-screen">
       
        <Hero />
-      {/* <TrustIndicators />
-      <FeaturedProjects />
+      <TrustIndicators />
+      {/* <FeaturedProjects />
       <Skills />
       <ExperienceTimeline />
       <BlogHighlights />
