@@ -18,7 +18,7 @@ function App() {
       <ExperienceTimeline />
       <BlogHighlights />
       <Testimonials />
-      {/* <ContactCTA /> */}
+      <ContactCTA />
     </div>
   );
 }
