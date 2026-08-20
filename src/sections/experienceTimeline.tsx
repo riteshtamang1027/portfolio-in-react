@@ -1,19 +1,19 @@
 export default function ExperienceTimeline() {
   return (
-    <main className="px-38 py-16 space-y-12 border-b bg-background">
+    <main className="px-8 sm:px-12 md:px-16 lg:px-24 xl:px-36 py-16 space-y-12 border-b bg-background">
       <section className="space-y-4">
         <p className="text-secondary-text text-xs tracking-widest">CAREER</p>
-        <h2 className="text-4xl font-bold text-foreground/80 tracking-wide">
+        <h2 className="md:text-4xl sm:text-2xl text-xl font-bold text-foreground/80 tracking-wide">
           Experience
         </h2>
-        <p className="text-muted-foreground tracking-wide">
+        <p className="text-muted-foreground md:text-base text-sm tracking-wide">
           Seven years building software for startups and growth-stage companies.
         </p>
       </section>
 
       {/* experience timeline */}
 
-      <section className="flex flex-col px-42 gap-8">
+      <section className="flex flex-col xl:px-42 lg:px-34 sm:px-16 pl-6 gap-8">
         {experienceLine.map((item, i) => (
           <div
             key={i}
@@ -24,13 +24,13 @@ export default function ExperienceTimeline() {
               {item.year}
             </p>
             <div className="space-y-1">
-              <h4 className="text-foreground/80 font-semibold text-xl">
+              <h4 className="text-foreground/80 font-semibold md:text-xl sm:text-lg text-base">
                 {item.role}
               </h4>
-              <p className="text-muted-foreground text-sm">{item.type}</p>
+              <p className="text-muted-foreground md:text-sm text-xs">{item.type}</p>
             </div>
 
-            <p className="text-muted-foreground">{item.description}</p>
+            <p className="text-muted-foreground md:text-base text-sm">{item.description}</p>
           </div>
         ))}
       </section>

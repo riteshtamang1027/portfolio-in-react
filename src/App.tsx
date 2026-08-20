@@ -15,8 +15,8 @@ function App() {
       <TrustIndicators />
       <FeaturedProjects />
       <Skills />
-      {/* <ExperienceTimeline />
-      <BlogHighlights />
+      <ExperienceTimeline />
+      {/* <BlogHighlights />
       <Testimonials />
       <ContactCTA /> */}
     </div>
