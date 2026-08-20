@@ -27,10 +27,14 @@ export default function ExperienceTimeline() {
               <h4 className="text-foreground/80 font-semibold md:text-xl sm:text-lg text-base">
                 {item.role}
               </h4>
-              <p className="text-muted-foreground md:text-sm text-xs">{item.type}</p>
+              <p className="text-muted-foreground md:text-sm text-xs">
+                {item.type}
+              </p>
             </div>
 
-            <p className="text-muted-foreground md:text-base text-sm">{item.description}</p>
+            <p className="text-muted-foreground md:text-base text-sm">
+              {item.description}
+            </p>
           </div>
         ))}
       </section>

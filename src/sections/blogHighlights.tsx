@@ -2,22 +2,22 @@ import { MoveRight } from "lucide-react";
 
 export default function BlogHighlights() {
   return (
-    <main className="px-38 py-16 space-y-12 border-b bg-surface">
+    <main className="px-8 sm:px-12 md:px-16 lg:px-24 xl:px-36 py-16 space-y-12 border-b bg-surface">
       <section className="space-y-4">
         <p className="text-secondary-text text-xs tracking-widest">WRITING</p>
-        <h2 className="text-4xl font-bold text-foreground/80 tracking-wide">
+        <h2 className="md:text-4xl sm:text-2xl text-xl font-bold text-foreground/80 tracking-wide">
           From the blog
         </h2>
-        <p className="text-muted-foreground tracking-wide">
+        <p className="text-muted-foreground md:text-base text-sm tracking-wide">
           Notes on engineering, architecture, and the craft of shipping.
         </p>
       </section>
 
       {/* blog cards */}
 
-     <div className="flex items-center justify-between gap-8">
+     <div className="grid xl:grid-cols-3 sm:grid-cols-2 items-center justify-center gap-8 w-full">
          {blog.map((item, i) => (
-        <section className="border rounded-xl w-1/3 bg-card cursor-pointer group ease-linear">
+        <section className="border rounded-xl sm:h-112 bg-card cursor-pointer group ease-linear">
           <div key={i} className="h-64 overflow-hidden rounded-t-xl">
             <img className="h-64 w-full object-cover group-hover:scale-105 duration-300" src={item.image} alt="Image" />
           </div>
@@ -33,10 +33,10 @@ export default function BlogHighlights() {
                 {item.time}
               </span>
             </div>
-            <p className="text-lg font-semibold text-foreground/80 group-hover:text-secondary-text">
+            <p className="md:text-lg text-base font-semibold text-foreground/80 group-hover:text-secondary-text">
               {item.title}
             </p>
-            <div className="flex opacity-0 items-center gap-x-1 group-hover:opacity-100 duration-300 group-hover:text-secondary-text text-muted-foreground">
+            <div className="flex md:opacity-0 items-center gap-x-1 group-hover:opacity-100 duration-300 group-hover:text-secondary-text text-muted-foreground md:text-base text-sm ">
               <span>Read aritcle</span>
               <MoveRight size={16} className="text-muted-foreground group-hover:text-secondary-text"/>
             </div>
