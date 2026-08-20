@@ -3,15 +3,17 @@ import { LuGithub } from "react-icons/lu";
 
 export default function FeaturedProjects() {
   return (
-    <main className="px-38 mt-16 space-y-12 bg-backgroud">
+    <main className="px-8 sm:px-12 md:px-16 lg:px-24 xl:px-36 mt-16 space-y-12 bg-backgroud">
+      
+      {/* header */}
       <section className="space-y-4">
         <p className="text-secondary-text text-xs tracking-widest">
           FEATURED WORK
         </p>
-        <h2 className="text-4xl font-bold text-foreground/80 tracking-wide">
+        <h2 className="md:text-4xl sm:text-2xl text-xl font-bold text-foreground/80 tracking-wide">
           Selected projects
         </h2>
-        <p className="text-muted-foreground tracking-wide">
+        <p className="text-muted-foreground tracking-wide md:text-base text-sm">
           A handful of recent systems I've designed, built, and shipped to
           production.
         </p>
@@ -21,30 +23,30 @@ export default function FeaturedProjects() {
         {project.map((item, index) => (
         <section
           key={index}
-          className={`flex items-center justify-between gap-8 border border-border rounded-xl p-8 w-full ${index % 2 !== 0 ? "flex-row-reverse" : ""} `}
+          className={`flex md:flex-row flex-col items-center justify-between gap-8 border border-border rounded-xl md:p-8 w-full overflow-hidden ${index % 2 !== 0 ? "md:flex-row-reverse" : ""} `}
         >
           {/* image */}
           <img
-            className="w-1/2 rounded-xl object-cover cursor-pointer h-72"
+            className="md:w-1/2 w-full md:rounded-xl  object-cover cursor-pointer h-72"
             src={item.image}
             alt="Image"
           />
-          <div className="w-1/2 space-y-4">
+          <div className="md:w-1/2 space-y-4 w-full px-4 pb-4">
             {/* number of project or case study number */}
             <p className="text-xs font-semibold text-secondary-text tracking-wider">
               {item.caseId}
             </p>
             {/* project title */}
-            <h3 className="text-3xl text-foreground/80 font-semibold">
+            <h3 className="md:text-3xl text-lg text-foreground/80 font-semibold">
               {item.title}
             </h3>
             {/* description */}
-            <p className="text-muted-foreground tracking-wide">
+            <p className="text-muted-foreground md:text-base text-sm tracking-wide">
               {item.description}
             </p>
 
             {/* tools used during develop the project */}
-            <div className="flex items-center space-x-2">
+            <div className="flex flex-wrap items-center gap-2">
               {item.skillUsed.map((skill, index) => (
                 <span
                   key={index}

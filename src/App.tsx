@@ -15,10 +15,10 @@ function App() {
       <TrustIndicators />
       <FeaturedProjects />
       <Skills />
-      <ExperienceTimeline />
+      {/* <ExperienceTimeline />
       <BlogHighlights />
       <Testimonials />
-      <ContactCTA />
+      <ContactCTA /> */}
     </div>
   );
 }
