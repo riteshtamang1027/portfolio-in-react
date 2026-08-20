@@ -15,35 +15,42 @@ export default function BlogHighlights() {
 
       {/* blog cards */}
 
-     <div className="grid xl:grid-cols-3 sm:grid-cols-2 items-center justify-center gap-8 w-full">
-         {blog.map((item, i) => (
-        <section className="border rounded-xl sm:h-112 bg-card cursor-pointer group ease-linear">
-          <div key={i} className="h-64 overflow-hidden rounded-t-xl">
-            <img className="h-64 w-full object-cover group-hover:scale-105 duration-300" src={item.image} alt="Image" />
-          </div>
-          <div className="px-4 py-8 flex flex-col gap-y-4">
-            <div className="flex gap-x-4">
-              <span
-                className="bg-surface rounded-full px-2 py-0.5
+      <div className="grid xl:grid-cols-3 md:grid-cols-2  gap-8 w-full">
+        {blog.map((item, i) => (
+          <section className="border rounded-xl sm:h-112 bg-card cursor-pointer group ease-linear">
+            <div key={i} className="h-64 overflow-hidden rounded-t-xl">
+              <img
+                className="h-64 w-full object-cover group-hover:scale-105 duration-300"
+                src={item.image}
+                alt="Image"
+              />
+            </div>
+            <div className="px-4 py-8 flex flex-col gap-y-4">
+              <div className="flex gap-x-4">
+                <span
+                  className="bg-surface rounded-full px-2 py-0.5
                 text-xs font-semibold text-foreground/80"
-              >
-                {item.type}
-              </span>{" "}
-              <span className="text-xs  text-muted-foreground">
-                {item.time}
-              </span>
+                >
+                  {item.type}
+                </span>{" "}
+                <span className="text-xs  text-muted-foreground">
+                  {item.time}
+                </span>
+              </div>
+              <p className="md:text-lg text-base font-semibold text-foreground/80 group-hover:text-secondary-text">
+                {item.title}
+              </p>
+              <div className="flex md:opacity-0 items-center gap-x-1 group-hover:opacity-100 duration-300 group-hover:text-secondary-text text-muted-foreground md:text-base text-sm ">
+                <span>Read aritcle</span>
+                <MoveRight
+                  size={16}
+                  className="text-muted-foreground group-hover:text-secondary-text"
+                />
+              </div>
             </div>
-            <p className="md:text-lg text-base font-semibold text-foreground/80 group-hover:text-secondary-text">
-              {item.title}
-            </p>
-            <div className="flex md:opacity-0 items-center gap-x-1 group-hover:opacity-100 duration-300 group-hover:text-secondary-text text-muted-foreground md:text-base text-sm ">
-              <span>Read aritcle</span>
-              <MoveRight size={16} className="text-muted-foreground group-hover:text-secondary-text"/>
-            </div>
-          </div>
-        </section>
-      ))}
-     </div>
+          </section>
+        ))}
+      </div>
     </main>
   );
 }

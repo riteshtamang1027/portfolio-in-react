@@ -1,29 +1,29 @@
 export default function Testimonials() {
   return (
-    <main className="px-38 py-16 space-y-12 border-b">
+    <main className="px-8 sm:px-12 md:px-16 lg:px-24 xl:px-36 py-16 space-y-12 border-b">
       <section className="space-y-4">
         <p className="text-secondary-text text-xs tracking-widest">
           TESTIMONIALS
         </p>
-        <h2 className="text-4xl font-bold text-foreground/80 tracking-wide">
+        <h2 className="md:text-4xl sm:text-2xl text-xl font-bold text-foreground/80 tracking-wide">
           What collaborators say
         </h2>
-        <p className="text-muted-foreground tracking-wide">
+        <p className="text-muted-foreground md:text-base text-sm tracking-wide">
           Notes on engineering, architecture, and the craft of shipping.
         </p>
       </section>
       {/* comment box */}
-      <section className="flex items-center gap-4 justify-between">
+      <section className="grid xl:grid-cols-3 md:grid-cols-2  gap-4 w-full">
         {testimonial.map((item, i) => (
           <div
             key={i}
-            className="flex flex-col px-6 py-8 w-max border rounded-xl gap-6"
+            className="flex flex-col px-6 py-8  border rounded-xl gap-6"
           >
-            <p className="border-b tracking-wider text-foreground/80 pb-4">
+            <p className="border-b tracking-wider text-base max-sm:text-sm text-foreground/80 pb-4">
               "{item.comment}"
             </p>
             <div className="flex items-center gap-x-3">
-              <p className="rounded-full bg-accent-icon/20 p-4 w-10 h-10 flex items-center justify-center text-secondary-text">
+              <p className="rounded-full bg-accent-icon/20 p-4 md:w-10 md:h-10 sm:w-8 sm:h-8 w-6 h-6 flex items-center justify-center text-secondary-text">
                 {item.profile}
               </p>
               <div className="">

@@ -17,8 +17,8 @@ function App() {
       <Skills />
       <ExperienceTimeline />
       <BlogHighlights />
-      {/* <Testimonials />
-      <ContactCTA /> */}
+      <Testimonials />
+      {/* <ContactCTA /> */}
     </div>
   );
 }
