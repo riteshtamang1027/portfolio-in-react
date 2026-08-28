@@ -1,3 +1,4 @@
+// import Card from "./components/ui/card";
 import BlogHighlights from "./sections/blogHighlights";
 import ContactCTA from "./sections/contactCTA";
 import ExperienceTimeline from "./sections/experienceTimeline";
@@ -10,8 +11,7 @@ import TrustIndicators from "./sections/trustIndicators";
 function App() {
   return (
     <div className="flex-1 min-h-screen">
-      
-       <Hero />
+      <Hero />
       <TrustIndicators />
       <FeaturedProjects />
       <Skills />
@@ -19,6 +19,7 @@ function App() {
       <BlogHighlights />
       <Testimonials />
       <ContactCTA />
+      {/* <Card /> */}
     </div>
   );
 }

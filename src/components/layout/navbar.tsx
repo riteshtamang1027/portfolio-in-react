@@ -1,6 +1,7 @@
 import { CodeXml, Menu, Sun } from "lucide-react";
 // import { useEffect, useState } from "react";
 import { LuGithub, LuLinkedin } from "react-icons/lu";
+import UseScrollPosition from "../../hooks/useScrollPosition";
 
 export default function Navbar() {
   const header_offser = 72;
@@ -14,18 +15,9 @@ export default function Navbar() {
     }
   }
 
-  // const [scrolled, setScrolled] = useState(false);
-
-  // useEffect(() => {
-  //   const onScroll = () => setScrolled(window.scrollY > 12);
-  //   window.addEventListener("scroll", onScroll);
-  //   return () => {
-  //     window.removeEventListener("scroll", onScroll);
-  //   };
-  // }, []);
-
-  return (
-    <header className="flex flex-1 px-8 sm:px-12 md:px-16 lg:px-24 xl:px-36 py-4 bg-backgroun/70 backdrop-blur-lg min-w-full border-b border-border justify-between">
+const scrolled = UseScrollPosition(8); // ← calling the hook  
+return (
+    <header className={`flex flex-1 px-8 sm:px-12 md:px-16 lg:px-24 xl:px-36 py-4 bg-backgroun  min-w-full justify-between ${scrolled ? "backdrop-blur-xl border-b" : "border-transparent"}`}>
       {/* logo */}
       <div className="flex items-center space-x-2">
         <CodeXml className="text-accent-icon md:w-8 md:h-8" strokeWidth={2.6}  />{" "}

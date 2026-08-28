@@ -15,8 +15,7 @@ export default function ContactCTA() {
           </p>
         </div>
         <div className="lg:w-1/3 flex flex-col lg:items-end lg:justify-end gap-4 w-full ">
-
-        {/* contact button */}
+          {/* contact button */}
           <Button
             icon={<Mail size={15} className="text-foreground/90" />}
             className="border bg-card lg:w-max rounded-lg px-5 py-3 font-semibold text-sm flex items-center justify-center text-foreground/90 gap-2  cursor-pointer"
@@ -24,8 +23,7 @@ export default function ContactCTA() {
             Contact me{" "}
           </Button>
 
-        
-{/* Scheduling button */}
+          {/* Scheduling button */}
           <Button
             icon={<Calendar size={15} className="text-secondary/90" />}
             className="border border-border text-secondary/90 lg:w-max rounded-lg px-5 py-3 font-semibold text-sm flex items-center justify-center gap-2 cursor-pointer"
