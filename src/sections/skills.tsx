@@ -2,7 +2,7 @@ import { Cloud, CodeXml, Database, Server,Infinity, Terminal  } from "lucide-rea
 
 export default function Skills() {
   return (
-    <main className="bg-surface px-8 sm:px-12 md:px-16 lg:px-24 xl:px-36 mt-16 py-16 space-y-12 border-x border">
+    <main id="skills" className="bg-surface px-8 sm:px-12 md:px-16 lg:px-24 xl:px-36 mt-16 py-16 space-y-12 border-x border">
       <section className="space-y-4">
         <p className="text-secondary-text text-xs tracking-widest">Toolkit</p>
         <h2 className="md:text-4xl sm:text-2xl text-xl font-bold text-foreground/80 tracking-wide">

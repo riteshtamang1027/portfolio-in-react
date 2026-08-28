@@ -3,7 +3,7 @@ import { LuGithub } from "react-icons/lu";
 
 export default function FeaturedProjects() {
   return (
-    <main className="px-8 sm:px-12 md:px-16 lg:px-24 xl:px-36 mt-16 space-y-12 bg-backgroud">
+    <main id="projects" className="px-8 sm:px-12 md:px-16 lg:px-24 xl:px-36 mt-16 space-y-12 bg-backgroud">
       
       {/* header */}
       <section className="space-y-4">

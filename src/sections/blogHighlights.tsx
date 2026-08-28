@@ -2,7 +2,7 @@ import { MoveRight } from "lucide-react";
 
 export default function BlogHighlights() {
   return (
-    <main className="px-8 sm:px-12 md:px-16 lg:px-24 xl:px-36 py-16 space-y-12 border-b bg-surface">
+    <main id="blog" className="px-8 sm:px-12 md:px-16 lg:px-24 xl:px-36 py-16 space-y-12 border-b bg-surface">
       <section className="space-y-4">
         <p className="text-secondary-text text-xs tracking-widest">WRITING</p>
         <h2 className="md:text-4xl sm:text-2xl text-xl font-bold text-foreground/80 tracking-wide">

@@ -3,7 +3,7 @@ import Button from "../components/ui/button";
 
 export default function ContactCTA() {
   return (
-    <main className="px-8 sm:px-12 md:px-16 lg:px-24 xl:px-36 py-20 space-y-16 bg-background">
+    <main id="contact" className="px-8 sm:px-12 md:px-16 lg:px-24 xl:px-36 py-20 space-y-16 bg-background">
       <div className="flex lg:flex-row flex-col items-center justify-between gap-8 border rounded-4xl bg-accent-foreground xl:p-20 p-8">
         <div className="lg:w-2/3 flex flex-col gap-8">
           <h1 className="text-primary-foreground xl:text-5xl md:text-4xl sm:text- text-xl font-semibold md:leading-14">

@@ -3,7 +3,7 @@ import Button from "../components/ui/button";
 
 export default function Hero() {
   return (
-    <main className="flex flex-col items-center justify-center bg-background  py-8 px-8 sm:px-12 md:px-16 lg:px-24 xl:px-36  text-center space-y-4">
+    <main id="about" className="flex flex-col items-center justify-center bg-background  py-8 px-8 sm:px-12 md:px-16 lg:px-24 xl:px-36  text-center space-y-4">
 
       {/* about your self */}
       <div className="flex flex-col items-center justify-center w-full lg:w-2/3 xl:w-1/2 space-y-4">
