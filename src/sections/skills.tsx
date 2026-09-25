@@ -23,19 +23,19 @@ export default function Skills() {
             <div className="bg-surface-muted p-2 rounded-sm">
               <item.icon className="text-accent-icon " size={16} />
             </div>
-            <span className="font-semibold lg:text-lg text-base text-foreground/80 tracking-wide">
+            <h3 className="font-semibold lg:text-lg text-base text-foreground/80 tracking-wide">
               {item.label}
-            </span>
+            </h3>
           </div>
 
           <div className="flex items-center flex-wrap gap-2">
             {item.tools.map((skill, index) => (
-              <span
+              <p
                 key={index}
                 className="md:px-3 px-2 py-1 rounded-lg text-xs tracking-wide text-muted-foreground border border-ring bg-surface"
               >
                 {skill}
-              </span>
+              </p>
             ))}
           </div>
         </section>

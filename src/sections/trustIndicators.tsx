@@ -5,12 +5,12 @@ export default function TrustIndicators() {
         {trustIndicators.map((item, index) => (
           <div
             key={index}
-            className="flex flex-col items-center justify-center space-y-1 md:py-8 py-4 text-center"
+            className="flex flex-col items-center justify-center space-y-1 md:py-8 py-4 text-center font-sans"
           >
             <span className="lg:text-3xl md:text-2xl text-xl font-semibold text-foreground">
               {item.number}
             </span>
-            <span className="md:text-base sm:text-sm text-xs font-medium text-muted-foreground">
+            <span className="md:text-base sm:text-sm text-xs font-medium text-muted-foreground ">
               {item.label}
             </span>
           </div>

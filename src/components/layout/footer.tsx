@@ -21,8 +21,8 @@ export default function Footer() {
 
         {/* shortcut links */}
        <div className="space-y-4">
-         <p className="flex md:hidden font-semibold text-foreground/80">Shortcut Links</p>
-        <ul className="flex md:flex-row flex-col md:items-center md:justify-between md:gap-8 gap-4 font-semibold text-muted-foreground md:text-base text-sm">
+         <h3 className="flex md:hidden font-semibold text-foreground/80">Shortcut Links</h3>
+        <ul className="flex md:flex-row flex-col md:items-center md:justify-between md:gap-8 gap-4 font-semibold text-muted-foreground md:text-base text-sm font-sans">
           <li>About</li>
           <li>Projects</li>
           <li>Blog</li>

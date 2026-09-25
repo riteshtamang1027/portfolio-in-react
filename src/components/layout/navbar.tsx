@@ -43,7 +43,7 @@ export default function Navbar() {
                 e.preventDefault();
                 scrollToId(link.id); // ← pass the id directly, matches the new signature
               }}
-              className="text-sm font-semibold text-muted-foreground"
+              className="text-sm font-semibold text-muted-foreground font-sans"
             >
               {link.label}
             </a>

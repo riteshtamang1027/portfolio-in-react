@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap");
 @import "tailwindcss";
 
 @custom-variant dark (&:is(.dark *));
@@ -26,30 +28,30 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --color-accent-icon:var(--accent-icon);
+  --color-accent-icon: var(--accent-icon);
   --color-surface: var(--surface);
   --color-surface-muted: var(--surface-muted);
   --color-brand: var(--brand);
   --color-brand-foreground: var(--brand-foreground);
-  --color-secondary-text:var(--secondary-text);
-  --color-subtle:var(--subtle);
+  --color-secondary-text: var(--secondary-text);
+  --color-subtle: var(--subtle);
   --color-muted-points: var(--muted-points);
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --font-sans: "IBM Plex Mono", monospace;
+  --font-display: "Cormorant Garamond", serif;
 }
 
 :root {
-/* Primary buttons, logo badge, links, active states, timeline dots */
+  /* Primary buttons, logo badge, links, active states, timeline dots */
   --brand: oklch(0.4318 0.0865 166.91);
   /* Category labels, company names, "View All" links */
   --secondary-text: oklch(54.023% 0.1153 163.043);
-  --border: oklch(0.92 0.008 250);;
+  --border: oklch(0.92 0.008 250);
   --accent-icon: oklch(0.5081 0.1049 165.61);
   --accent-hover: oklch(0.378 0.073 168.94);
   /* Badge backgrounds */
   --subtle: oklch(0.378 0.073 168.94);
   --muted-points: oklch(0.5081 0.1049 165.61);
-  --ring:  oklch(0.5081 0.1049 165.61);
+  --ring: oklch(0.5081 0.1049 165.61);
 
   --radius: 0.75rem;
   --background: oklch(1 0 0);
@@ -62,7 +64,7 @@
   --popover-foreground: oklch(0.18 0.02 250);
   --primary: oklch(0.21 0.03 255);
   --primary-foreground: oklch(0.99 0.003 250);
-  
+
   --brand-foreground: oklch(0.99 0.003 250);
   --secondary: oklch(0.96 0.006 250);
   --secondary-foreground: oklch(0.21 0.03 255);
@@ -75,17 +77,17 @@
 }
 
 .dark {
-/* Primary buttons, logo badge, links, active states, timeline dots */
+  /* Primary buttons, logo badge, links, active states, timeline dots */
   --brand: oklch(0.4318 0.0865 166.91);
   /* Category labels, company names, "View All" links */
   --secondary-text: oklch(0.596 0.1274 163.23);
-  --border: oklch(0.92 0.008 250);;
+  --border: oklch(0.92 0.008 250);
   --accent-icon: oklch(69.725% 0.13688 167.362);
   --accent-hover: oklch(0.378 0.073 168.94);
   /* Badge backgrounds */
   --subtle: oklch(41.142% 0.07753 169.781);
   --muted-points: oklch(0.5081 0.1049 165.61);
-  --ring:  oklch(0.5081 0.1049 165.61);
+  --ring: oklch(0.5081 0.1049 165.61);
 
   --background: oklch(0.14 0.015 250);
   --foreground: oklch(0.97 0.005 250);
@@ -107,7 +109,6 @@
   --accent-foreground: oklch(0.97 0.005 250);
   --destructive: oklch(0.65 0.2 25);
   --destructive-foreground: oklch(0.97 0.005 250);
-  
 }
 
 @layer base {
@@ -120,11 +121,18 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
-    font-family: var(--font-sans);
+    font-family:
+      ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+      "Courier New", monospace;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
     -webkit-font-smoothing: antialiased;
   }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-sans);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
 }
-
-
- 

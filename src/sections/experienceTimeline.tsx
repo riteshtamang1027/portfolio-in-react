@@ -24,9 +24,9 @@ export default function ExperienceTimeline() {
               {item.year}
             </p>
             <div className="space-y-1">
-              <h4 className="text-foreground/80 font-semibold md:text-xl sm:text-lg text-base">
+              <h3 className="text-foreground/80 font-semibold md:text-xl sm:text-lg text-base">
                 {item.role}
-              </h4>
+              </h3>
               <p className="text-muted-foreground md:text-sm text-xs">
                 {item.type}
               </p>

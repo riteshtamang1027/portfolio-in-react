@@ -3,7 +3,7 @@ import Button from "../components/ui/button";
 
 export default function Hero() {
   return (
-    <main id="about" className="flex flex-col items-center justify-center bg-background  py-8 px-8 sm:px-12 md:px-16 lg:px-24 xl:px-36  text-center space-y-4">
+    <main id="about" className="flex flex-col items-center justify-center bg-background py-8 px-8 sm:px-12 md:px-16 lg:px-24 xl:px-36  text-center space-y-4">
 
       {/* about your self */}
       <div className="flex flex-col items-center justify-center w-full lg:w-2/3 xl:w-1/2 space-y-4">
@@ -13,17 +13,17 @@ export default function Hero() {
           <Circle size={8} strokeWidth={1.5} className="fill-accent-icon" />
           <span className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 size-1 rounded-full ring-3 ring-ring/40 animate-ping" />
         </div>{" "}
-        <span>Available for new opportunities</span>
+        <span className="">Available for new opportunities</span>
       </div>
       {/* hero */}
       <section className="space-y-4 mt-4">
         <p className="md:text-lg text-base tracking-wider font-semibold text-muted-foreground">
           HELLO, I'M
         </p>
-        <h1 className="md:space-x-6 md:text-5xl text-3xl space-x-4 font-bold ">
-         <span className="text-foreground/90 tracking-wider">RITESH</span> <span className="text-accent-icon tracking-wider">LAMA</span>
+        <h1 className="md:space-x-6 md:text-5xl text-3xl space-x-4 font-bold font-display">
+         <span className="text-foreground/90">RITESH</span> <span className="text-accent-icon ">LAMA</span>
         </h1>
-        <h2 className="md:text-2xl text-lg font-semibold tracking-wider text-muted-foreground">
+        <h2 className="md:text-2xl text-lg font-semibold text-muted-foreground">
           Full Stack Developer & Software Engineer
         </h2>
         <div className="flex space-x-2 items-center justify-center">
@@ -58,7 +58,7 @@ export default function Hero() {
       </section>
       </div>
       {/* skills */}
-      <div className="flex flex-wrap gap-4 mt-4">
+      <div className="flex flex-wrap gap-4 mt-4 font-sans">
         {skills.map((skill) => (
           <div
             key={skill}

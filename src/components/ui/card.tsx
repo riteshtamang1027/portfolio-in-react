@@ -3,8 +3,6 @@ import { useState } from "react";
 export default function Card() {
   const [saveChange, setSaveChange] = useState(true);
 
- 
-
   return (
     <div className={`${saveChange ? "bg-background text-primary" : "bg-black text-white"} flex flex-col items-center justify-center gap-4 h-screen`}>
       <div

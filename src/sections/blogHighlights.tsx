@@ -29,11 +29,11 @@ export default function BlogHighlights() {
               <div className="flex gap-x-4">
                 <span
                   className="bg-surface rounded-full px-2 py-0.5
-                text-xs font-semibold text-foreground/80"
+                text-xs font-semibold text-foreground/80 font-sans"
                 >
                   {item.type}
                 </span>{" "}
-                <span className="text-xs  text-muted-foreground">
+                <span className="text-xs  text-muted-foreground font-sans">
                   {item.time}
                 </span>
               </div>
@@ -41,7 +41,7 @@ export default function BlogHighlights() {
                 {item.title}
               </p>
               <div className="flex md:opacity-0 items-center gap-x-1 group-hover:opacity-100 duration-300 group-hover:text-secondary-text text-muted-foreground md:text-base text-sm ">
-                <span>Read aritcle</span>
+                <span className="">Read aritcle</span>
                 <MoveRight
                   size={16}
                   className="text-muted-foreground group-hover:text-secondary-text"
